@@ -1,8 +1,24 @@
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+<!-- Google Analytics 4 -->
+{% if site.google_analytics %}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'YOUR_TRACKING_ID');
+  
+  gtag('config', '{{ site.google_analytics }}', {
+    anonymize_ip: true,
+    cookie_flags: 'SameSite=None;Secure'
+  });
 </script>
+{% endif %}
+
+<!-- Alternative Analytics: Plausible (uncomment to use) -->
+{% if site.plausible_domain %}
+<!-- <script defer data-domain="{{ site.plausible_domain }}" src="https://plausible.io/js/script.js"></script> -->
+{% endif %}
