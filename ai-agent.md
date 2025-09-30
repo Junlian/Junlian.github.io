@@ -10,3 +10,14 @@ Welcome to the AI Agent Development hub. Here, you'll find a curated collection 
 ## Core AI Agent Topics
 
 Below is a list of articles covering fundamental concepts and advanced techniques in AI agent development. Each post is designed to provide practical, hands-on knowledge to guide you through the development process.
+
+<ul>
+  {% for post in site.posts %}
+    {% if post.url contains 'ai-agent' or post.url contains 'conversational-ai' or post.url contains 'llm' or post.url contains 'prompt-engineering' or post.url contains 'context' or post.url contains 'memory' %}
+      <li>
+        <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+        <p>{{ post.excerpt }}</p>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
