@@ -24,39 +24,6 @@ Infrastructure choices play a crucial role in memory implementation performance 
 
 This report will provide a comprehensive examination of both short-term and long-term memory implementation strategies, including practical code demonstrations in Python, project structure recommendations, and best practices for memory management in production AI systems. We will explore the architectural patterns, framework integrations, and performance considerations that enable developers to create AI agents that not only remember but also learn and adapt over time, ultimately delivering the personalized, context-aware experiences that users have come to expect from intelligent systems.
 
-## Table of Contents
-
-- Implementing Short-Term Memory for AI Agents
-    - Core Architecture of Short-Term Memory Systems
-    - Implementation Patterns with LangGraph
-- Initialize Redis connection
-- Define state schema
-- Build graph with memory capabilities
-- Invoke with thread-specific memory
-    - State Access and Modification Patterns
-    - Performance Optimization Strategies
-    - Integration with Agent Workflows
-    - Monitoring and Debugging Capabilities
-    - Implementing Long-Term Memory for AI Agents
-        - Core Architecture of Long-Term Memory Systems
-        - Implementation Patterns with Vector Databases
-        - Memory Consolidation and Optimization Strategies
-        - Cross-Agent Memory Sharing Patterns
-        - Advanced Retrieval and Query Optimization
-        - Production Deployment and Scaling Considerations
-    - Project Structure and Framework Integration
-        - Architectural Patterns for Memory Systems
-        - Framework Selection and Integration Strategies
-- ... define graph structure ...
-    - Project Organization and Module Structure
-- config/production.yaml
-    - Performance Optimization and Scaling Patterns
-    - Testing and Quality Assurance Strategies
-
-
-
-
-
 ## Implementing Short-Term Memory for AI Agents
 
 ### Core Architecture of Short-Term Memory Systems
@@ -216,7 +183,6 @@ The monitoring system tracks key performance indicators including:
 - **Persistence Latency**: Time spent on state persistence operations
 
 These capabilities ensure production deployments maintain reliability while providing developers with the tools needed to optimize memory usage patterns ([Production Monitoring Guidelines](https://redis.io/learn/what-is-agent-memory-example-using-lang-graph-and-redis)).
-
 
 ## Implementing Long-Term Memory for AI Agents
 
@@ -515,7 +481,6 @@ class ShardedMemoryManager:
 
 Production deployments must implement comprehensive monitoring for memory usage patterns, query performance, and system health. Successful implementations report 99.9% availability with automatic failover capabilities and geographic replication for disaster recovery ([Production Deployment Guide](https://www.edstellar.com/blog/ai-agent-frameworks)).
 
-
 ## Project Structure and Framework Integration
 
 ### Architectural Patterns for Memory Systems
@@ -786,21 +751,3 @@ The most significant findings indicate that production-ready memory systems requ
 
 These findings have substantial implications for AI system design, suggesting that future implementations should adopt layered architectures with clear separation between memory interfaces, management logic, and storage backends. Next steps include developing standardized APIs for memory operations across frameworks and implementing more sophisticated consolidation algorithms that automatically compress and prioritize memories based on usage patterns and relevance scoring ([Survey of AI Agent Memory Frameworks](https://www.graphlit.com/blog/survey-of-ai-agent-memory-frameworks)). The demonstrated project structure provides a foundation for scalable deployments, but further research is needed into cross-platform memory compatibility and ethical considerations around memory retention and privacy in persistent agent systems.
 
-
-## References
-
-- [https://www.projectpro.io/article/data-integration-projects/955](https://www.projectpro.io/article/data-integration-projects/955)
-- [https://dev.to/taipy/9-open-source-python-tools-to-build-better-data-apps-in-2025-3dem](https://dev.to/taipy/9-open-source-python-tools-to-build-better-data-apps-in-2025-3dem)
-- [https://www.devacetech.com/insights/python-frameworks](https://www.devacetech.com/insights/python-frameworks)
-- [https://medium.com/mlearning-ai/building-a-neural-network-zoo-from-scratch-the-long-short-term-memory-network-1cec5cf31b7](https://medium.com/mlearning-ai/building-a-neural-network-zoo-from-scratch-the-long-short-term-memory-network-1cec5cf31b7)
-- [https://www.mssqltips.com/sqlservertip/11462/machine-learning-with-long-short-term-memory-network/](https://www.mssqltips.com/sqlservertip/11462/machine-learning-with-long-short-term-memory-network/)
-- [https://www.tribe.ai/applied-ai/beyond-the-bubble-how-context-aware-memory-systems-are-changing-the-game-in-2025](https://www.tribe.ai/applied-ai/beyond-the-bubble-how-context-aware-memory-systems-are-changing-the-game-in-2025)
-- [https://dagster.io/guides/data-pipeline-frameworks-key-features-10-tools-to-know-in-2025](https://dagster.io/guides/data-pipeline-frameworks-key-features-10-tools-to-know-in-2025)
-- [https://www.geeksforgeeks.org/deep-learning/long-short-term-memory-networks-using-pytorch/](https://www.geeksforgeeks.org/deep-learning/long-short-term-memory-networks-using-pytorch/)
-- [https://www.reddit.com/r/ChatGPTCoding/comments/1grfl4c/memoripy_adding_real_memory_to_ai_with_shortterm/](https://www.reddit.com/r/ChatGPTCoding/comments/1grfl4c/memoripy_adding_real_memory_to_ai_with_shortterm/)
-- [https://medium.com/@nomannayeem/building-ai-agents-that-actually-remember-a-developers-guide-to-memory-management-in-2025-062fd0be80a1](https://medium.com/@nomannayeem/building-ai-agents-that-actually-remember-a-developers-guide-to-memory-management-in-2025-062fd0be80a1)
-- [https://distantjob.com/blog/python-libraries-and-frameworks/](https://distantjob.com/blog/python-libraries-and-frameworks/)
-- [https://brollyacademy.com/python-ai-projects/](https://brollyacademy.com/python-ai-projects/)
-- [https://medium.com/@anil.jain.baba/long-term-agentic-memory-with-langgraph-824050b09852](https://medium.com/@anil.jain.baba/long-term-agentic-memory-with-langgraph-824050b09852)
-- [https://www.machinelearningmastery.com/lstms-with-python/](https://www.machinelearningmastery.com/lstms-with-python/)
-- [https://www.graphlit.com/blog/survey-of-ai-agent-memory-frameworks](https://www.graphlit.com/blog/survey-of-ai-agent-memory-frameworks)

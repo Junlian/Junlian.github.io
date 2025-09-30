@@ -87,34 +87,6 @@ This implementation demonstrates the core principles of dynamic context adaptati
 
 Effective dynamic context adaptation systems must address several critical challenges, including context overflow management, ambiguous feedback interpretation, and maintaining response consistency across extended conversations. Advanced implementations often incorporate reinforcement learning techniques for continuous improvement and multi-modal input handling for richer contextual understanding ([Python in Plain English, 2024](https://python.plainenglish.io/dynamic-prompt-engineering-for-chatgpt-using-python-6e7f573f4567)). The project structure for such systems typically involves modular components for context management, prompt engineering, response generation, and feedback processing, allowing for scalable and maintainable conversational AI applications.
 
-## Table of Contents
-
-- Implementing Dynamic Prompt Adaptation with Context Management
-    - Core Principles of Context-Aware Prompt Engineering
-    - Architectural Framework for Dynamic Context Management
-    - Real-Time Context Processing Pipeline
-    - Advanced Context Persistence Strategies
-    - Performance Optimization and Monitoring
-- Example optimization metrics
-    - Project Structure for Dynamic Context Systems
-    - Building Function Calling Systems for External Tool Integration
-        - Architectural Patterns for Dynamic Tool Orchestration
-        - Context-Aware Tool Selection Algorithms
-        - Dynamic Parameter Extraction and Validation
-        - State Management Across Tool Execution Chains
-        - Performance Optimization and Error Handling
-    - Designing Conversational State Management and Testing Strategies
-        - Hierarchical State Management Architecture
-        - Multi-Turn Conversation Testing Framework
-        - Dynamic Context Adaptation Algorithms
-        - Conversation Flow Validation and Metrics
-        - Project Structure for State-Driven Conversations
-- State recovery and continuity management
-
-
-
-
-
 ## Implementing Dynamic Prompt Adaptation with Context Management
 
 ### Core Principles of Context-Aware Prompt Engineering
@@ -363,7 +335,6 @@ This structure supports modular development, testing, and deployment while allow
 
 The implementation demonstrates how dynamic prompt adaptation with context management creates responsive, intelligent conversational systems that maintain coherence across extended interactions while optimizing resource usage.
 
-
 ## Building Function Calling Systems for External Tool Integration
 
 ### Architectural Patterns for Dynamic Tool Orchestration
@@ -602,7 +573,6 @@ class ExecutionOrchestrator:
         
         raise AllFallbacksFailedError(f"All fallbacks failed for {tool_name}")
 ```
-
 
 ## Designing Conversational State Management and Testing Strategies
 
@@ -959,20 +929,3 @@ The most significant findings reveal that systems implementing hierarchical stat
 
 The implications of this research point toward increasingly sophisticated context-aware systems that can maintain coherent conversations across extended interactions and domain transitions. Next steps should focus on developing more advanced context compression techniques, improving cross-session state recovery mechanisms, and creating standardized evaluation metrics for conversational quality. Future research should also explore the integration of predictive context preloading and more sophisticated fallback strategies for handling tool failures, ultimately moving toward truly adaptive conversational systems that can dynamically reconfigure their behavior based on real-time conversation flow and user needs ([Medium, 2025](https://medium.com/@danushidk507/context-engineering-in-llms-and-ai-agents-eb861f0d3e9b)).
 
-
-## References
-
-- [https://vapi.ai/blog/multi-turn-conversations](https://vapi.ai/blog/multi-turn-conversations)
-- [https://www.apriorit.com/dev-blog/context-aware-chatbot-development](https://www.apriorit.com/dev-blog/context-aware-chatbot-development)
-- [https://promptengineering.org/the-context-aware-conversational-ai-framework/](https://promptengineering.org/the-context-aware-conversational-ai-framework/)
-- [https://gpttutorpro.com/designing-conversational-flows-in-python-structuring-effective-dialogues/](https://gpttutorpro.com/designing-conversational-flows-in-python-structuring-effective-dialogues/)
-- [https://www.analyticsvidhya.com/blog/2024/07/conversational-chatbot-with-gpt4o/](https://www.analyticsvidhya.com/blog/2024/07/conversational-chatbot-with-gpt4o/)
-- [https://www.youtube.com/watch?v=9REJ66cRlCM](https://www.youtube.com/watch?v=9REJ66cRlCM)
-- [https://sendbird.com/blog/what-are-multi-turn-conversations/ai-agent-testing](https://sendbird.com/blog/what-are-multi-turn-conversations/ai-agent-testing)
-- [https://learn.microsoft.com/en-us/azure/ai-services/qnamaker/how-to/multi-turn](https://learn.microsoft.com/en-us/azure/ai-services/qnamaker/how-to/multi-turn)
-- [https://medium.com/@diwahar1997/developing-a-conversational-chatbot-with-retrieval-augmented-generation-rag-dynamic-session-6b6bb9c7b126](https://medium.com/@diwahar1997/developing-a-conversational-chatbot-with-retrieval-augmented-generation-rag-dynamic-session-6b6bb9c7b126)
-- [https://devblogs.microsoft.com/semantic-kernel/semantic-kernel-python-context-management/](https://devblogs.microsoft.com/semantic-kernel/semantic-kernel-python-context-management/)
-- [https://medium.com/@shekhar.manna83/multi-turn-evaluations-for-llm-applications-1fd56b2fc3eb](https://medium.com/@shekhar.manna83/multi-turn-evaluations-for-llm-applications-1fd56b2fc3eb)
-- [https://promptagent.uk/conversation-design-how-to-structure-multi-turn-ai-dialogues/](https://promptagent.uk/conversation-design-how-to-structure-multi-turn-ai-dialogues/)
-- [https://aiproduct.engineer/tutorials/langgraph-tutorial-dynamic-conversation-summarization-unit-12-exercise-4](https://aiproduct.engineer/tutorials/langgraph-tutorial-dynamic-conversation-summarization-unit-12-exercise-4)
-- [https://github.com/langchain-ai/langchain/discussions/19693](https://github.com/langchain-ai/langchain/discussions/19693)

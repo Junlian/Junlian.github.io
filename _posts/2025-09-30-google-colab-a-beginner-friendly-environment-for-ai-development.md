@@ -16,72 +16,6 @@ Google Colaboratory (Colab) is a powerful, cloud-based platform that provides an
 
 Colab supports seamless project organization and execution, allowing users to upload or clone repositories (e.g., from GitHub), mount Google Drive for data storage, and structure code in cells for modular testing and execution ([Sarthak, 2023](https://medium.com/@shibugarg0303/run-entire-python-project-on-google-colab-10de1871c9a5)). Its integration with popular AI tools, such as Google’s Gemini LLM, further enhances its utility for modern AI projects ([Sharma, 2025](https://medium.com/@kshitijsharma94/how-to-use-google-colab-with-googles-llm-gemini-a-beginner-s-guide-9d215a6cbd83)). With real-time collaboration features and no-cost access to advanced hardware, Colab democratizes AI development, providing a scalable platform for education and prototyping ([Code With Ebrima, 2025](https://www.udemy.com/course/google-colab-tutorial-2025-from-beginner-basics-to-advance/?srsltid=AfmBOooj3Rtp0hUL3lkDbMHiqAwDn8_Aa2RJZfrHoMduHTbptHBtU0f-)). This introduction explores the setup, environment configuration, and practical workflow of Google Colab, including Python code demonstrations and project structure guidelines tailored for beginners embarking on their AI journey.
 
-## Table of Contents
-
-- Setting Up Google Colab for AI Development
-    - Configuring Hardware Acceleration for Optimal Performance
-- Check GPU availability
-    - Environment Setup and Package Management
-- Mount Google Drive for persistent storage
-- Install project-specific packages
-- Verify installations
-- Create and activate virtual environment
-- Install exact versions for reproducibility
-    - Project Structure and Version Control Integration
-- Configure Git
-- Clone repository and set up project
-- Install package in development mode
-- Import custom modules
-- Automated commit and push
-    - Advanced Session Management and Persistence
-- Prevent session timeouts
-- Save checkpoint files regularly
-- Efficient large file handling
-- Compress processed data
-- Direct streaming from Drive without full download
-    - API Integration and Secure Credential Management
-- Store API keys securely
-- Retrieve API key from secrets
-- Initialize API client securely
-- Example API usage with error handling
-- config.py in your src directory
-- Usage in notebooks
-    - Configuring the Development Environment
-        - Environment Initialization and Dependency Management
-- Add project directory to Python path
-- Set environment variables for consistent behavior
-    - Advanced Dependency Resolution and Conflict Management
-- Check pre-installed versions
-- Install with dependency resolution
-    - Runtime Configuration and Performance Optimization
-- Monitor resource usage
-- Configure TensorFlow for optimal performance
-    - Development Environment Customization and Extensions
-- Install and configure development tools
-- Enable useful extensions
-- Customize display options
-    - Environment Verification and Validation Framework
-- Comprehensive environment validation
-- Run validation
-    - Integrated Development Workflow Configuration
-- Set up testing framework integration
-- Configure test discovery
-- Run tests automatically
-    - Structuring and Executing a Python AI Project
-        - Modular Code Organization and Import Strategies
-- Add project root to Python path
-- Import custom modules using absolute imports
-    - Data Pipeline Implementation and Management
-    - Model Training Orchestration Framework
-    - Execution Workflow Automation
-- Add to notebook cell
-    - Collaborative Development and Code Review Integration
-- Usage in team environment
-
-
-
-
-
 ## Setting Up Google Colab for AI Development
 
 ### Configuring Hardware Acceleration for Optimal Performance
@@ -294,7 +228,6 @@ config = ProjectConfig()
 
 This setup ensures consistent configuration across all project components while maintaining security best practices ([Gemini API Guide](https://medium.com/@kshitijsharma94/how-to-use-google-colab-with-googles-llm-gemini-a-beginner-s-guide-9d215a6cbd83)).
 
-
 ## Configuring the Development Environment
 
 ### Environment Initialization and Dependency Management
@@ -440,7 +373,6 @@ with open('/content/drive/MyDrive/ai_project/pyproject.toml', 'a') as f:
 ```
 
 This integrated approach ensures that code developed in Colab meets quality standards and can be seamlessly integrated into larger development workflows ([Python Testing Guide](https://docs.pytest.org/en/stable/)).
-
 
 ## Structuring and Executing a Python AI Project
 
@@ -614,18 +546,3 @@ This research demonstrates that Google Colab provides a robust, accessible platf
 
 The implications of these findings are substantial for educational and early-stage AI development. Beginners can immediately leverage Colab's free resources while implementing professional-grade development practices, including automated experiment tracking, secure API integration, and collaborative workflows. The integration of MLflow for experiment documentation and smart data caching strategies addresses common pitfalls in reproducibility and resource management ([TensorFlow Performance Guide](https://www.tensorflow.org/guide/performance/overview)). Next steps should involve exploring Colab Pro for enhanced computational resources when projects scale, implementing continuous integration pipelines, and developing more advanced monitoring systems for long-running training jobs ([Google Colab Documentation](https://colab.research.google.com/notebooks/io.ipynb)).
 
-
-## References
-
-- [https://www.youtube.com/watch?v=Zn5tmx0ynw8](https://www.youtube.com/watch?v=Zn5tmx0ynw8)
-- [https://colab.research.google.com/](https://colab.research.google.com/)
-- [https://medium.com/@ByteWave/harnessing-google-colaboratory-for-ai-programming-a-comprehensive-guide-with-detailed-examples-67e4cec32190](https://medium.com/@ByteWave/harnessing-google-colaboratory-for-ai-programming-a-comprehensive-guide-with-detailed-examples-67e4cec32190)
-- [https://www.youtube.com/watch?v=SuzwJ28mby4](https://www.youtube.com/watch?v=SuzwJ28mby4)
-- [https://medium.com/@kshitijsharma94/how-to-use-google-colab-with-googles-llm-gemini-a-beginner-s-guide-9d215a6cbd83](https://medium.com/@kshitijsharma94/how-to-use-google-colab-with-googles-llm-gemini-a-beginner-s-guide-9d215a6cbd83)
-- [https://www.youtube.com/watch?v=4s7mOZ07tBc](https://www.youtube.com/watch?v=4s7mOZ07tBc)
-- [https://community.deeplearning.ai/t/coding-environment-colab-tips/290232](https://community.deeplearning.ai/t/coding-environment-colab-tips/290232)
-- [https://medium.com/@shibugarg0303/run-entire-python-project-on-google-colab-10de1871c9a5](https://medium.com/@shibugarg0303/run-entire-python-project-on-google-colab-10de1871c9a5)
-- [https://www.youtube.com/watch?v=8KeJZBZGtYo](https://www.youtube.com/watch?v=8KeJZBZGtYo)
-- [https://www.geeksforgeeks.org/machine-learning/how-to-run-python-code-on-google-colaboratory/](https://www.geeksforgeeks.org/machine-learning/how-to-run-python-code-on-google-colaboratory/)
-- [https://www.youtube.com/watch?v=cmNrIcB77D0](https://www.youtube.com/watch?v=cmNrIcB77D0)
-- [https://www.marqo.ai/blog/getting-started-with-google-colab-a-beginners-guide](https://www.marqo.ai/blog/getting-started-with-google-colab-a-beginners-guide)

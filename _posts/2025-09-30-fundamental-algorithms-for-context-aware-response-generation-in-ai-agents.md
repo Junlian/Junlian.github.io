@@ -24,43 +24,6 @@ Fundamental algorithms underpinning these systems include:
 
 These algorithms are increasingly deployed in Python-based stacks using libraries such as LangChain, LlamaIndex, and Hugging Face Transformers, often integrated with cloud-native vector databases (e.g., FAISS) and graph databases (e.g., FalkorDB) for scalable, production-ready systems ([ProjectPro, 2025](https://www.projectpro.io/article/langchain-chatbot/1106)). The following sections will explore each algorithm in depth, accompanied by Python code demonstrations and a modular project structure tailored for enterprise-grade AI agent development.
 
-## Table of Contents
-
-- Implementing Agentic Memory with LangChain and FalkorDB
-    - Architectural Integration of FalkorDB with LangChain
-- Initialize FalkorDB connection and LLM
-- Create QA chain with graph-aware memory
-- Query with contextual memory retrieval
-    - State Management and Context Persistence
-    - Performance Benchmarks and Scalability
-    - Implementation Challenges and Mitigations
-- Hybrid retriever with fallback
-- Use in agent
-    - Real-World Use Case: Customer Support Agent
-    - Building Context-Aware Responses with Retrieval-Augmented Generation (RAG)
-        - Core RAG Architecture for Contextual Response Generation
-- Initialize embedding model and vector index
-- Sample knowledge base encoding
-- Retrieval function
-- Generator setup
-    - Advanced Retrieval Optimization Techniques
-- Advanced retrieval with query expansion
-- Multi-hop retrieval implementation
-    - Dynamic Context Integration and Response Synthesis
-    - Evaluation Metrics for Context-Aware RAG Systems
-- Automated evaluation framework
-    - Project Structure for Scalable RAG Implementation
-    - Designing Conversational Memory for AI Agents
-        - Memory Architecture Design Patterns
-        - Context Window Optimization Techniques
-        - Emotional Context Integration
-        - Real-Time Memory Management Algorithms
-        - Cross-Session Memory Persistence Framework
-
-
-
-
-
 ## Implementing Agentic Memory with LangChain and FalkorDB
 
 ### Architectural Integration of FalkorDB with LangChain
@@ -173,7 +136,6 @@ def get_contextual_memory(user_id, query):
 ```
 
 This implementation reduces repeat inquiries by 60% and decreases resolution time by 45% compared to stateless agents ([FalkorDB, 2025](https://www.falkordb.com/blog/building-ai-agents-with-memory-langchain/)).
-
 
 ## Building Context-Aware Responses with Retrieval-Augmented Generation (RAG)
 
@@ -384,7 +346,6 @@ rag-project/
 This structure enables parallel development of retrieval and generation components while maintaining clear interfaces between modules. The configuration-driven approach allows for easy experimentation with different embedding models, retrieval strategies, and language models without code changes ([Ilias Ism, 2025](https://medium.com/@illyism/chatgpt-rag-guide-2025-build-reliable-ai-with-retrieval-0f881a4714af)).
 
 Implementation of this project structure requires careful attention to dependency management and version control, particularly when handling multiple embedding models and LLM providers. Containerization using Docker ensures consistent environments across development, testing, and production deployments.
-
 
 ## Designing Conversational Memory for AI Agents
 
@@ -655,21 +616,3 @@ The most significant finding is that hybrid approaches combining multiple memory
 
 These findings have substantial implications for AI agent development, particularly in creating more sophisticated, personalized, and reliable conversational systems. The next steps involve addressing implementation challenges such as graph schema complexity and LLM query interpretation errors through improved auto-suggestion mechanisms and hybrid fallback strategies. Future research should focus on standardizing evaluation metrics across different memory architectures and developing more efficient compression algorithms to further optimize context window usage. Additionally, ethical considerations around privacy-aware memory handling and user-controlled retention policies will become increasingly important as these systems deploy at scale ([Redis with Raphael De Lio, 2025](https://medium.com/redis-with-raphael-de-lio/agent-memory-with-spring-ai-redis-af26dc7368bd)).
 
-
-## References
-
-- [https://langchain-ai.github.io/langgraph/concepts/memory/](https://langchain-ai.github.io/langgraph/concepts/memory/)
-- [https://www.youtube.com/watch?v=fsENEq4F55Q](https://www.youtube.com/watch?v=fsENEq4F55Q)
-- [https://promptengineering.org/the-context-aware-conversational-ai-framework/](https://promptengineering.org/the-context-aware-conversational-ai-framework/)
-- [https://redis.io/blog/build-smarter-ai-agents-manage-short-term-and-long-term-memory-with-redis/](https://redis.io/blog/build-smarter-ai-agents-manage-short-term-and-long-term-memory-with-redis/)
-- [https://redis.io/learn/what-is-agent-memory-example-using-lang-graph-and-redis](https://redis.io/learn/what-is-agent-memory-example-using-lang-graph-and-redis)
-- [https://www.youtube.com/watch?v=xsPf8MkdMx8](https://www.youtube.com/watch?v=xsPf8MkdMx8)
-- [https://brollyacademy.com/python-ai-projects/](https://brollyacademy.com/python-ai-projects/)
-- [https://www.projectpro.io/article/nlp-projects-ideas-/452](https://www.projectpro.io/article/nlp-projects-ideas-/452)
-- [https://www.projectpro.io/article/conversational-ai-with-rasa/1143](https://www.projectpro.io/article/conversational-ai-with-rasa/1143)
-- [https://python.langchain.com/docs/how_to/chatbots_memory/](https://python.langchain.com/docs/how_to/chatbots_memory/)
-- [https://medium.com/@piyushkashyap045/langgraph-a-step-by-step-guide-to-building-an-end-to-end-chatbot-with-memory-support-8a1e6677a447](https://medium.com/@piyushkashyap045/langgraph-a-step-by-step-guide-to-building-an-end-to-end-chatbot-with-memory-support-8a1e6677a447)
-- [https://supermemory.ai/blog/how-to-add-conversational-memory-to-llms-using-langchain/](https://supermemory.ai/blog/how-to-add-conversational-memory-to-llms-using-langchain/)
-- [https://www.rapidinnovation.io/post/build-autonomous-ai-agents-from-scratch-with-python](https://www.rapidinnovation.io/post/build-autonomous-ai-agents-from-scratch-with-python)
-- [https://medium.com/redis-with-raphael-de-lio/agent-memory-with-spring-ai-redis-af26dc7368bd](https://medium.com/redis-with-raphael-de-lio/agent-memory-with-spring-ai-redis-af26dc7368bd)
-- [https://medium.com/@shwet.prakash97/create-a-langgraph-agent-with-conversational-memory-custom-tool-executor-and-securely-injecting-14ef34f4169d](https://medium.com/@shwet.prakash97/create-a-langgraph-agent-with-conversational-memory-custom-tool-executor-and-securely-injecting-14ef34f4169d)

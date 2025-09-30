@@ -20,42 +20,6 @@ Current architectural patterns for conversation memory typically incorporate thr
 
 This report examines the core architectural patterns underlying modern conversation memory systems, providing practical Python implementations and comprehensive project structures that demonstrate how these patterns can be effectively implemented in production environments. The following sections will explore specific architectural approaches, including vector store integration, memory chunking strategies, retrieval optimization techniques, and the implementation of multi-modal memory systems that support complex, long-running conversational agents ([Machupalli, 2025](https://dzone.com/articles/ai-agent-architectures-patterns-applications-guide)).
 
-## Table of Contents
-
-- Core Memory Types and Architectures for AI Agents
-    - Episodic Memory Systems
-    - Graph-Based Memory Architectures
-- Example: Adding a user preference to the graph
-    - Hybrid Memory Systems
-    - Procedural Memory for Skill Retention
-- The agent recalls and reuses the tool based on past executions
-    - Scalable Memory Persistence Patterns
-- The graph's state is automatically persisted
-    - Implementing Vector Store Memory with FAISS and LangChain
-        - FAISS Integration Architecture for Conversational Memory
-        - Memory Persistence and Retrieval Optimization
-- Initialize persistent vector store
-- Create memory retriever with optimization parameters
-    - Hybrid Memory Integration Patterns
-    - Metadata-Enhanced Memory Retrieval
-- Advanced metadata filtering implementation
-- Example usage: Retrieve recent memories about specific topic
-    - Scalability and Production Deployment
-- Production-ready FAISS configuration
-    - Practical Application: Building a Memory-Enabled AI Agent System
-        - Stateful Agent Orchestration with LangGraph
-- Initialize graph with state management
-    - Multi-Modal Memory Integration
-- Define multi-modal index schema
-    - Dynamic Memory Pruning and Summarization
-    - Tool-Augmented Memory for Actionable Context
-    - Cross-Session Memory Synchronization
-- application-redis.yaml
-
-
-
-
-
 ## Core Memory Types and Architectures for AI Agents
 
 ### Episodic Memory Systems
@@ -181,7 +145,6 @@ graph = graph_builder.compile(persistence=persistence)
 graph.invoke({"input": "Query user preferences"})
 ```
 This pattern supports use cases like continuous learning agents, where memory must scale across millions of interactions without performance degradation ([DataCamp](https://www.datacamp.com/tutorial/langgraph-agents)).
-
 
 ## Implementing Vector Store Memory with FAISS and LangChain
 
@@ -369,7 +332,6 @@ class ProductionFAISSMemory:
 
 This implementation supports 99.9% availability with average query latency under 200ms for datasets up to 100 million vectors, making it suitable for enterprise-scale agent deployments ([Vector Databases: Building a Local LangChain Store](https://www.pluralsight.com/resources/blog/ai-and-data/langchain-local-vector-database-tutorial)).
 
-
 ## Practical Application: Building a Memory-Enabled AI Agent System
 
 ### Stateful Agent Orchestration with LangGraph
@@ -497,20 +459,3 @@ The most significant findings highlight that hybrid memory systems, combining sh
 
 These findings imply that future developments in AI agent memory should focus on standardizing interoperability between memory types, optimizing real-time synchronization in distributed systems, and enhancing privacy-preserving techniques for sensitive contexts. Next steps include exploring advanced compression algorithms for memory storage, integrating reinforcement learning for adaptive memory retrieval, and developing unified APIs for seamless multi-modal memory management across diverse agent frameworks ([Medium](https://lakshmananutulapati.medium.com/building-conversational-memory-with-langgraph-a-complete-guide-9e0f68825e70); [Rapid Innovation](https://www.rapidinnovation.io/post/how-to-integrate-langgraph-with-autogen-crewai-and-other-frameworks)).
 
-
-## References
-
-- [https://www.salesmate.io/blog/how-to-build-ai-agents/](https://www.salesmate.io/blog/how-to-build-ai-agents/)
-- [https://medium.com/@nomannayeem/building-ai-agents-that-actually-remember-a-developers-guide-to-memory-management-in-2025-062fd0be80a1](https://medium.com/@nomannayeem/building-ai-agents-that-actually-remember-a-developers-guide-to-memory-management-in-2025-062fd0be80a1)
-- [https://redis.io/learn/what-is-agent-memory-example-using-lang-graph-and-redis](https://redis.io/learn/what-is-agent-memory-example-using-lang-graph-and-redis)
-- [https://www.analyticsvidhya.com/blog/2024/11/build-a-data-analysis-agent/](https://www.analyticsvidhya.com/blog/2024/11/build-a-data-analysis-agent/)
-- [https://www.rapidinnovation.io/post/how-to-integrate-langgraph-with-autogen-crewai-and-other-frameworks](https://www.rapidinnovation.io/post/how-to-integrate-langgraph-with-autogen-crewai-and-other-frameworks)
-- [https://medium.com/@mayadakhatib/combining-langgraph-and-crewai-bf38c719ab27](https://medium.com/@mayadakhatib/combining-langgraph-and-crewai-bf38c719ab27)
-- [https://lakshmananutulapati.medium.com/building-conversational-memory-with-langgraph-a-complete-guide-9e0f68825e70](https://lakshmananutulapati.medium.com/building-conversational-memory-with-langgraph-a-complete-guide-9e0f68825e70)
-- [https://github.com/crewAIInc/crewAI](https://github.com/crewAIInc/crewAI)
-- [https://medium.com/redis-with-raphael-de-lio/agent-memory-with-spring-ai-redis-af26dc7368bd](https://medium.com/redis-with-raphael-de-lio/agent-memory-with-spring-ai-redis-af26dc7368bd)
-- [https://medium.com/superagentic-ai/superoptix-memory-a-practical-guide-for-building-agents-that-remember-41fc9eba7256](https://medium.com/superagentic-ai/superoptix-memory-a-practical-guide-for-building-agents-that-remember-41fc9eba7256)
-- [https://www.pixeltable.com/blog/practical-guide-building-agents](https://www.pixeltable.com/blog/practical-guide-building-agents)
-- [https://cfp.in.pycon.org/2025/talk/XN3P7N/](https://cfp.in.pycon.org/2025/talk/XN3P7N/)
-- [https://redis.io/blog/build-smarter-ai-agents-manage-short-term-and-long-term-memory-with-redis/](https://redis.io/blog/build-smarter-ai-agents-manage-short-term-and-long-term-memory-with-redis/)
-- [https://www.youtube.com/watch?v=CyLYY_xb5bQ](https://www.youtube.com/watch?v=CyLYY_xb5bQ)

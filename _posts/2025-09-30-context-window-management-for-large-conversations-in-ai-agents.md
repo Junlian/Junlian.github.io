@@ -22,35 +22,6 @@ Recent advancements in frameworks like LangGraph have enabled more structured ap
 
 This report examines practical implementation strategies for context window management in large conversations, focusing on Python-based solutions, architectural patterns, and production-ready code examples. We explore techniques ranging from basic truncation and summarization to advanced multi-agent systems and context isolation patterns, providing developers with comprehensive guidance for building scalable, efficient AI agents capable of handling extended dialogues without compromising performance or coherence.
 
-## Table of Contents
-
-- Implementing Context Window Management with LangGraph
-    - Context Window Optimization Techniques
-    - State Management for Context Persistence
-    - Integration with External Memory Systems
-- Initialize persistent memory
-- Context-aware invocation with automatic trimming
-    - Advanced Context Compression Techniques
-    - Performance Monitoring and Optimization
-- Monitor context usage patterns
-    - Building a Stateful AI Agent with Context Summarization
-        - Dynamic Summarization Architecture for Long Conversations
-        - Implementation of Multi-Level Summarization Nodes
-        - Project Structure for Summarization-Centric Agents
-        - Performance Optimization and Monitoring
-        - Integration with External Services and APIs
-    - Integrating MCP for Enhanced Context Management
-        - MCP Architecture for Context Window Optimization
-        - Dynamic Context Routing with MCP Servers
-        - Project Structure for MCP-Based Context Management
-- config/server_configs.yaml
-    - Performance Optimization and Monitoring
-    - Security and Compliance Considerations
-
-
-
-
-
 ## Implementing Context Window Management with LangGraph
 
 ### Context Window Optimization Techniques
@@ -203,7 +174,6 @@ Key performance metrics to monitor include:
 Optimization strategies based on these metrics can reduce context window usage by 30-50% while maintaining conversation quality. The most effective approaches typically involve combining multiple techniques: message trimming for immediate context reduction, semantic compression for medium-term optimization, and external storage for long-term context preservation ([DataCamp Tutorial](https://www.datacamp.com/tutorial/langgraph-agents)).
 
 Implementation best practices include establishing clear token budgets for different conversation types and implementing automated scaling of context management strategies based on conversation length and complexity. This hierarchical approach ensures optimal performance across various use cases while maintaining the quality of AI agent interactions.
-
 
 ## Building a Stateful AI Agent with Context Summarization
 
@@ -450,7 +420,6 @@ def create_enhanced_summarization_agent(llm, tools):
 This integration allows the agent to verify technical information and supplement conversation context with authoritative sources, significantly improving the quality and accuracy of generated summaries ([Building Intelligent AI Agents](https://www.projectpro.io/article/langgraph-projects-and-examples/1124)).
 
 The implementation demonstrates a comprehensive approach to context summarization that goes beyond basic message compression, incorporating external validation, performance monitoring, and hierarchical summarization techniques to maintain conversation quality while managing context window constraints effectively.
-
 
 ## Integrating MCP for Enhanced Context Management
 
@@ -719,21 +688,3 @@ The research highlights several critical implications for AI agent development. 
 
 Next steps should focus on implementing adaptive context management strategies that automatically adjust trimming thresholds and summarization levels based on real-time conversation analysis and performance metrics. Future research should explore hybrid approaches that combine the best aspects of internal summarization with MCP's dynamic retrieval capabilities, while developing standardized evaluation frameworks for measuring context preservation quality across different management strategies. Additionally, security enhancements focusing on zero-trust architectures for MCP implementations will be crucial as these systems handle increasingly sensitive organizational data ([Building Effective Agents Guide](https://github.com/lastmile-ai/mcp-agent); [LangChain Long-Term Memory Guide](https://python.langchain.com/docs/versions/migrating_memory/long_term_memory_agent/)).
 
-
-## References
-
-- [https://github.com/lastmile-ai/mcp-agent](https://github.com/lastmile-ai/mcp-agent)
-- [https://developers.redhat.com/articles/2025/08/12/how-build-simple-agentic-ai-server-mcp](https://developers.redhat.com/articles/2025/08/12/how-build-simple-agentic-ai-server-mcp)
-- [https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/mastering-model-context-protocol-mcp-building-multi-server-mcp-with-azure-openai/4424993](https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/mastering-model-context-protocol-mcp-building-multi-server-mcp-with-azure-openai/4424993)
-- [https://www.labellerr.com/blog/built-my-first-ai-agent-using-mcp/](https://www.labellerr.com/blog/built-my-first-ai-agent-using-mcp/)
-- [https://www.youtube.com/watch?v=MDBG2MOp4Go](https://www.youtube.com/watch?v=MDBG2MOp4Go)
-- [https://www.reddit.com/r/SaaS/comments/1mfdq99/need_validation_for_an_idea_mcp_server_which/](https://www.reddit.com/r/SaaS/comments/1mfdq99/need_validation_for_an_idea_mcp_server_which/)
-- [https://www.ateam-oracle.com/post/getting-started-with-model-context-protocol-concepts-and-code-part-1](https://www.ateam-oracle.com/post/getting-started-with-model-context-protocol-concepts-and-code-part-1)
-- [https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/model-context-protocol-mcp-integrating-azure-openai-for-enhanced-tool-integratio/4393788](https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/model-context-protocol-mcp-integrating-azure-openai-for-enhanced-tool-integratio/4393788)
-- [https://www.projectpro.io/article/model-context-protocol/1116](https://www.projectpro.io/article/model-context-protocol/1116)
-- [https://openai.github.io/openai-agents-python/mcp/](https://openai.github.io/openai-agents-python/mcp/)
-- [https://medium.com/@romanbessouat/how-i-built-a-coding-assistant-using-mcp-server-and-llm-agent-099a338fdf9e](https://medium.com/@romanbessouat/how-i-built-a-coding-assistant-using-mcp-server-and-llm-agent-099a338fdf9e)
-- [https://www.youtube.com/watch?v=aijS9fWB854](https://www.youtube.com/watch?v=aijS9fWB854)
-- [https://medium.com/@mohammed-siddiq/building-ai-agents-with-the-model-context-protocol-mcp-ab428f7d0d47](https://medium.com/@mohammed-siddiq/building-ai-agents-with-the-model-context-protocol-mcp-ab428f7d0d47)
-- [https://superagi.com/mastering-mcp-servers-in-2025-a-beginners-guide-to-integrating-ai-models-with-external-context-2/](https://superagi.com/mastering-mcp-servers-in-2025-a-beginners-guide-to-integrating-ai-models-with-external-context-2/)
-- [https://techcommunity.microsoft.com/blog/appsonazureblog/building-real-time-ai-apps-with-model-context-protocol-mcp-and-azure-web-pubsub/4432791](https://techcommunity.microsoft.com/blog/appsonazureblog/building-real-time-ai-apps-with-model-context-protocol-mcp-and-azure-web-pubsub/4432791)

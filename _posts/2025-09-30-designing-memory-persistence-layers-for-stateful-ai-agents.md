@@ -22,32 +22,6 @@ The design of memory persistence layers must address several critical considerat
 
 This report examines the architectural patterns, implementation strategies, and best practices for designing memory persistence layers that enable AI agents to maintain state across sessions, support human-in-the-loop workflows, and evolve their behavior based on accumulated experience. Through practical code demonstrations and structured project organization, we will explore how to build production-ready memory systems that transform AI agents from ephemeral responders into persistent, context-aware collaborators.
 
-## Table of Contents
-
-- Designing Memory Architecture for Stateful AI Agents
-    - Hierarchical Memory Systems for Context Management
-    - Graph-Based Memory for Multi-Agent Systems
-    - Persistence Layer Implementation Patterns
-    - Memory Retention and Optimization Strategies
-    - Distributed Memory Architecture for Scalability
-- Implementing Persistent Memory with Vector Databases
-    - Vector Database Selection Criteria for Production Systems
-    - Vector Storage Integration Patterns
-    - Memory Encoding and Embedding Strategies
-    - Retrieval-Augmented Generation Integration
-    - Project Structure for Vector-Based Memory Systems
-- config/memory_config.py
-    - Building and Deploying with LangGraph and FastAPI
-        - FastAPI-LangGraph Integration Architecture
-        - Containerized Deployment with Docker and PostgreSQL
-        - Authentication and Security Implementation
-        - Monitoring and Observability Integration
-        - Production Optimization Strategies
-
-
-
-
-
 ## Designing Memory Architecture for Stateful AI Agents
 
 ### Hierarchical Memory Systems for Context Management
@@ -438,7 +412,6 @@ class DistributedMemoryManager:
                 print(f"Replication failed for {region}: {e}")
 ```
 
-
 ## Implementing Persistent Memory with Vector Databases
 
 ### Vector Database Selection Criteria for Production Systems
@@ -711,7 +684,6 @@ class MemorySystemConfig:
 
 This structured approach enables seamless configuration changes between development (using local ChromaDB) and production (using managed Pinecone or Weaviate) environments while maintaining consistent APIs across the application ([Mem0, 2025](https://github.com/mem0ai/mem0)). The configuration-driven design supports A/B testing of different embedding models and vector database technologies without code changes, facilitating empirical optimization of memory system performance.
 
-
 ## Building and Deploying with LangGraph and FastAPI
 
 ### FastAPI-LangGraph Integration Architecture
@@ -909,19 +881,3 @@ This research demonstrates that effective memory persistence for stateful AI age
 
 The implications of these findings are substantial for AI system architects: successful deployment requires not just technical implementation but careful consideration of retention policies, distributed consistency models, and observability integration. The research indicates that machine learning-driven retention strategies outperform rule-based systems by 35% in retrieval relevance ([Aggarwal, 2024](https://aakriti-aggarwal.medium.com/memgpt-how-ai-learns-to-remember-like-humans-ab983ef79db3)), while distributed architectures must maintain 99.9% availability through hybrid consistency approaches ([Janakiram, 2025](https://thenewstack.io/how-to-add-persistence-and-long-term-memory-to-ai-agents/)). Next steps should focus on standardizing abstraction layers for vector store interoperability, developing more sophisticated relevance scoring algorithms, and creating benchmarking frameworks to evaluate memory systems across diverse agent workloads and deployment scenarios.
 
-
-## References
-
-- [https://www.youtube.com/watch?v=B3PT5_ALg94](https://www.youtube.com/watch?v=B3PT5_ALg94)
-- [https://www.youtube.com/watch?v=hE8C2M8GRLo](https://www.youtube.com/watch?v=hE8C2M8GRLo)
-- [https://medium.com/@manikantaleela/langgraph-basics-build-your-first-ai-agent-with-shared-memory-68dee8ee5669](https://medium.com/@manikantaleela/langgraph-basics-build-your-first-ai-agent-with-shared-memory-68dee8ee5669)
-- [https://aws.amazon.com/blogs/machine-learning/build-multi-agent-systems-with-langgraph-and-amazon-bedrock/](https://aws.amazon.com/blogs/machine-learning/build-multi-agent-systems-with-langgraph-and-amazon-bedrock/)
-- [https://redis.io/blog/langgraph-redis-build-smarter-ai-agents-with-memory-persistence/](https://redis.io/blog/langgraph-redis-build-smarter-ai-agents-with-memory-persistence/)
-- [https://langchain-ai.github.io/langgraph/](https://langchain-ai.github.io/langgraph/)
-- [https://www.youtube.com/watch?v=N4VUnYRA3BY](https://www.youtube.com/watch?v=N4VUnYRA3BY)
-- [https://ai.plainenglish.io/using-postgresql-with-langgraph-for-state-management-and-vector-storage-df4ca9d9b89e](https://ai.plainenglish.io/using-postgresql-with-langgraph-for-state-management-and-vector-storage-df4ca9d9b89e)
-- [https://realpython.com/langgraph-python/](https://realpython.com/langgraph-python/)
-- [https://www.projectpro.io/article/langgraph/1109](https://www.projectpro.io/article/langgraph/1109)
-- [https://github.com/filipkny/langgraph-deploy-demo](https://github.com/filipkny/langgraph-deploy-demo)
-- [https://github.com/wassim249/fastapi-langgraph-agent-production-ready-template](https://github.com/wassim249/fastapi-langgraph-agent-production-ready-template)
-- [https://www.zestminds.com/blog/build-ai-workflows-fastapi-langgraph/](https://www.zestminds.com/blog/build-ai-workflows-fastapi-langgraph/)

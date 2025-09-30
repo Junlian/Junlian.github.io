@@ -293,7 +293,6 @@ This approach keeps your codebase clean and focused. ([source](https://moldstud.
 
 By following these steps, you can set up a modular Rust project structure that is maintainable, scalable, and aligned with best practices for Solana program development.
 
-
 ## Adding Custom Instruction Data to a Rust Program
 
 ### Handling Instruction Data with Structs and Enums
@@ -555,7 +554,6 @@ fn validate_instruction(instruction: &CustomInstruction) -> Result<(), String> {
 ```
 
 This section introduces validation logic for instruction data, which is not covered in the existing content.
-
 
 ## Implementing and Testing Instruction Handlers in Rust
 

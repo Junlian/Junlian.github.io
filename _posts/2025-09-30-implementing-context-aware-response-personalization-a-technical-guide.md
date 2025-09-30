@@ -22,48 +22,6 @@ Recent advancements in standardization, particularly the Model Context Protocol 
 
 The technical implementation typically involves Python-based frameworks combining large language models (LLMs) with memory management systems, where context is maintained through structured storage of conversation history and retrieved on-demand to inform response generation ([How to Build a LangChain Chatbot with Memory?](https://www.analyticsvidhya.com/blog/2024/06/langchain-chatbot-with-memory/)). This approach ensures that each interaction builds upon previous exchanges, creating a coherent and personalized dialogue experience that adapts to user needs and preferences over time ([Build Context-Aware AI Agents in Python: LangChain, RAG, and Memory for Smarter Workflows](https://medium.com/@muruganantham52524/build-context-aware-ai-agents-in-python-langchain-rag-and-memory-for-smarter-workflows-47c0b2361878)).
 
-## Table of Contents
-
-- Implementing Context-Aware Chatbots with LangChain
-    - Core Components for Context Retention
-- Simulate dialogue
-- Output: "You mentioned you enjoy hiking and photography."
-    - Integration with External Knowledge Bases
-    - Customization Through Prompt Engineering
-    - Deployment and Scalability Architecture
-    - Monitoring and Optimization Techniques
-    - Building Memory-Enhanced Conversational Systems
-        - Advanced Vector-Based Memory Architectures
-- Initialize embeddings with optimized parameters
-- Create vector store with optimized indexing
-- Configure retriever with semantic search parameters
-    - Multi-Modal Memory Integration
-- Initialize multiple memory systems
-- Create composite memory system
-- Initialize conversation chain with composite memory
-    - Context-Aware Personalization Engine
-- Integration with conversation chain
-    - Production-Grade Memory Optimization
-- Metrics monitoring
-- Initialize optimized memory with Milvus
-    - Cross-Session Context Persistence
-- Usage in conversational system
-    - Integrating Model Context Protocol (MCP) for Advanced Context Management
-        - MCP Architecture for Context Personalization
-        - Python Implementation Framework
-- Initialize MCP server
-- Register context providers
-- Register personalization tools
-- Create FastAPI application
-    - Dynamic Context Retrieval and Processing
-    - Advanced Personalization Tool Integration
-    - Performance Optimization and Monitoring
-    - Security and Compliance Considerations
-
-
-
-
-
 ## Implementing Context-Aware Chatbots with LangChain
 
 ### Core Components for Context Retention
@@ -174,7 +132,6 @@ def trim_memory(memory: ConversationBufferMemory, max_tokens: int):
 ```
 
 Additionally, A/B testing different prompt templates or memory types helps optimize context relevance. For example, comparing `ConversationBufferWindowMemory` (sliding window) vs. summary-based memory for customer support scenarios ([Reddit Discussion](https://www.reddit.com/r/LangChain/comments/13lzq5d/implementing_contextaware_chatbot_responses_using/)).
-
 
 ## Building Memory-Enhanced Conversational Systems
 
@@ -538,7 +495,6 @@ user_context = cross_session_memory.load_context("user123", "session456")
 ```
 
 This system maintains user context across multiple sessions with intelligent context merging and recency-based weighting, enabling truly persistent personalization ([ProjectPro, 2025](https://www.projectpro.io/article/langchain-chatbot/1106)).
-
 
 ## Integrating Model Context Protocol (MCP) for Advanced Context Management
 
@@ -934,21 +890,3 @@ Most significantly, the research identifies that production-grade personalizatio
 
 The implications of these findings suggest that future context-aware systems should prioritize MCP adoption for standardized context management while implementing the demonstrated multi-modal memory architecture that combines short-term buffers, summarized history, and vector-based long-term memory. Next steps include developing more sophisticated preference learning algorithms that can adapt in real-time to user behavior changes and enhancing security frameworks to ensure compliance with evolving privacy regulations across different jurisdictions ([Ganesh Jagadeesan, 2025](https://www.linkedin.com/pulse/langchain-memory-engineering-persistent-context-ai-ganesh-jagadeesan-maoic); [DataCamp, 2025](https://www.datacamp.com/tutorial/mcp-model-context-protocol)). The provided Python implementations and project structure offer a practical foundation for building scalable, production-ready personalization systems that can evolve with advancing AI capabilities.
 
-
-## References
-
-- [https://github.blog/ai-and-ml/github-copilot/building-your-first-mcp-server-how-to-extend-ai-tools-with-custom-capabilities/](https://github.blog/ai-and-ml/github-copilot/building-your-first-mcp-server-how-to-extend-ai-tools-with-custom-capabilities/)
-- [https://github.com/ContextualAI/contextual-mcp-server](https://github.com/ContextualAI/contextual-mcp-server)
-- [https://github.com/Dicklesworthstone/ultimate_mcp_server](https://github.com/Dicklesworthstone/ultimate_mcp_server)
-- [https://superagi.com/mastering-model-context-protocol-mcp-servers-a-beginners-guide-to-integrating-ai-models-with-external-context/](https://superagi.com/mastering-model-context-protocol-mcp-servers-a-beginners-guide-to-integrating-ai-models-with-external-context/)
-- [https://www.flowhunt.io/blog/python-libs-for-mcp-server-development/](https://www.flowhunt.io/blog/python-libs-for-mcp-server-development/)
-- [https://dev.to/pavanbelagatti/a-hands-on-guide-to-model-context-protocol-mcp-5hfo](https://dev.to/pavanbelagatti/a-hands-on-guide-to-model-context-protocol-mcp-5hfo)
-- [https://docs.unstructured.io/examplecode/tools/mcp](https://docs.unstructured.io/examplecode/tools/mcp)
-- [https://www.byteplus.com/en/topic/542165](https://www.byteplus.com/en/topic/542165)
-- [https://www.anthropic.com/news/model-context-protocol](https://www.anthropic.com/news/model-context-protocol)
-- [https://zencoder.ai/blog/model-context-protocol](https://zencoder.ai/blog/model-context-protocol)
-- [https://github.com/RGGH/mcp-client-x](https://github.com/RGGH/mcp-client-x)
-- [https://www.datacamp.com/tutorial/mcp-model-context-protocol](https://www.datacamp.com/tutorial/mcp-model-context-protocol)
-- [https://medium.com/@technijian/how-to-build-ai-powered-api-integration-systems-using-model-context-protocol-mcp-in-2025-4ab3e0b4cbdf](https://medium.com/@technijian/how-to-build-ai-powered-api-integration-systems-using-model-context-protocol-mcp-in-2025-4ab3e0b4cbdf)
-- [https://developer.ibm.com/tutorials/mcp-watsonx/](https://developer.ibm.com/tutorials/mcp-watsonx/)
-- [https://github.com/punkpeye/awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers)

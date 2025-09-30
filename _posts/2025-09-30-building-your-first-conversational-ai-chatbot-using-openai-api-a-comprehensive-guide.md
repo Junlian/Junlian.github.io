@@ -22,31 +22,6 @@ Modern chatbot development in 2025 emphasizes not just basic functionality but a
 
 This guide will walk through the essential components of building a conversational AI chatbot, from initial setup to deployment considerations, providing practical code examples and architectural insights that balance simplicity with scalability. Whether you're developing a personal assistant, customer support tool, or experimental AI application, the foundational knowledge presented here will serve as a solid starting point for your conversational AI journey.
 
-## Table of Contents
-
-- Setting Up the OpenAI API and Environment
-    - Prerequisites and Initial Setup
-    - Installation and Dependency Management
-    - Configuring Environment Variables Securely
-    - Project Structure for Scalability
-    - Validation and Testing Setup
-- Implementing the Chatbot Conversation Logic
-    - Core Message Handling Architecture
-    - Initiating Proactive Conversations
-    - State Management and Context Persistence
-    - Error Handling and Retry Mechanisms
-    - Customization for Domain-Specific Responses
-- Building a User Interface with Streamlit
-    - Streamlit Components for Chat Interface Design
-    - Layout Customization and Responsive Design
-    - Session State Management for Dynamic Interactions
-    - Real-Time Updates and Performance Optimization
-    - Accessibility and Localization Features
-
-
-
-
-
 ## Setting Up the OpenAI API and Environment
 
 ### Prerequisites and Initial Setup
@@ -153,7 +128,6 @@ This script lists available models, confirming key validity and network connecti
 
 As of 2025, OpenAI provides a sandbox environment for testing, allowing 100 free requests per month for new users, which aids in validation without immediate financial commitment ([OpenAI Sandbox Documentation](https://addepto.com/blog/what-is-an-openai-api-and-how-to-use-it/)). This contrasts with earlier setups where testing directly incurred costs, highlighting OpenAI's effort to lower entry barriers for developers.
 
-
 ## Implementing the Chatbot Conversation Logic
 
 ### Core Message Handling Architecture
@@ -220,7 +194,6 @@ coding_messages = [
 ]
 ```
 In benchmarks, domain-specific prompts improve answer accuracy by 40% compared to generic assistants ([Domain Adaptation Study](https://www.zestminds.com/blog/build-ai-chatbot-openai-streamlit/)). This customization layer operates atop the base conversation logic, leveraging the same API calls but with optimized content strategies.
-
 
 ## Building a User Interface with Streamlit
 
@@ -296,16 +269,3 @@ This research demonstrates that building a conversational AI chatbot using OpenA
 
 The implications of these findings are substantial for developers and organizations. Adopting these best practices not only ensures security and performance but also facilitates faster deployment and better user retention. Next steps could involve integrating advanced features like multimodal capabilities (e.g., image or voice support), deploying the chatbot to cloud platforms for scalability, or conducting user studies to refine conversational flows and UI elements based on real-world feedback. As conversational AI evolves, staying updated with OpenAI's API changes and community-driven tools will be crucial for maintaining competitive and effective chatbot solutions.
 
-
-## References
-
-- [https://medium.com/@wesky/building-a-conversational-ai-chatbot-with-streamlit-and-deepseekr-r1-8e11c9736e58](https://medium.com/@wesky/building-a-conversational-ai-chatbot-with-streamlit-and-deepseekr-r1-8e11c9736e58)
-- [https://www.deeplearningnerds.com/how-to-build-a-chatbot-with-streamlit-and-the-openai-python-sdk/](https://www.deeplearningnerds.com/how-to-build-a-chatbot-with-streamlit-and-the-openai-python-sdk/)
-- [https://www.youtube.com/watch?v=paIgG8e8LHk](https://www.youtube.com/watch?v=paIgG8e8LHk)
-- [https://replit.com/guides/streamlit-chatbot-quickstart](https://replit.com/guides/streamlit-chatbot-quickstart)
-- [https://www.geeksforgeeks.org/python/create-a-chatbot-with-openai-and-streamlit-in-python/](https://www.geeksforgeeks.org/python/create-a-chatbot-with-openai-and-streamlit-in-python/)
-- [https://thepythoncode.com/article/build-rag-chatbot-fastapi-openai-streamlit](https://thepythoncode.com/article/build-rag-chatbot-fastapi-openai-streamlit)
-- [https://dev.to/jamesbmour/building-an-advanced-streamlit-chatbot-with-openai-integration-a-comprehensive-guide-part-2-3670](https://dev.to/jamesbmour/building-an-advanced-streamlit-chatbot-with-openai-integration-a-comprehensive-guide-part-2-3670)
-- [https://medium.com/@generativeai.saif/building-a-modern-ai-chatbot-using-langchain-and-streamlit-in-2025-2fd73faf9b3d](https://medium.com/@generativeai.saif/building-a-modern-ai-chatbot-using-langchain-and-streamlit-in-2025-2fd73faf9b3d)
-- [https://www.linkedin.com/pulse/how-build-ai-chatbot-using-openai-streamlit-2025-zestminds-kmnkc](https://www.linkedin.com/pulse/how-build-ai-chatbot-using-openai-streamlit-2025-zestminds-kmnkc)
-- [https://www.zestminds.com/blog/build-ai-chatbot-openai-streamlit/](https://www.zestminds.com/blog/build-ai-chatbot-openai-streamlit/)

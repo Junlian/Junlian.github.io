@@ -1,150 +1,68 @@
 ---
 layout: default
-title: "Junlian's Tech Blog - Rust, Solana & AI Development"
-description: "Welcome to Junlian's technical blog covering Rust programming, Solana blockchain development, AI agents, and modern web technologies. Choose your learning path and discover cutting-edge tutorials."
+title: "Build with Rust & Solana"
+description: "Deep-dive into Rust and Solana engineering with curated tutorials and production-ready patterns."
 ---
 
-# Welcome to Junlian's Tech Blog
-
-## 🚀 Choose Your Learning Path
-
-Explore our comprehensive content organized by main topics. Select the area that interests you most to dive deep into specialized tutorials and insights.
-
-<div class="topic-selection">
-  <div class="topic-card rust-solana">
-    <div class="topic-icon">🦀⚡</div>
-    <h3>Rust & Solana Blockchain Insights</h3>
-    <p>Master systems programming with Rust and build high-performance blockchain applications on Solana. Learn smart contracts, DeFi protocols, and Web3 development.</p>
-    <div class="topic-highlights">
-      <span class="highlight">Smart Contracts</span>
-      <span class="highlight">DeFi Development</span>
-      <span class="highlight">Performance Optimization</span>
-    </div>
-    <a href="/rust-solana/" class="topic-button">Explore Rust & Solana →</a>
+<section class="hero">
+  <span class="hero-eyebrow">Curated technical content</span>
+  <h1 class="hero-title">Master Rust & High-Performance Solana Systems</h1>
+  <p class="hero-lede">Systems-grade programming for builders shipping on Solana. Explore hands-on guides, architectural deep dives, and production-ready patterns.</p>
+  <div class="hero-actions">
+    <a class="primary" href="{{ '/rust-solana/' | relative_url }}">Explore Rust &amp; Solana Lab</a>
   </div>
-  
-  <div class="topic-card ai-agent">
-    <div class="topic-icon">🤖🧠</div>
-    <h3>AI Agent Development</h3>
-    <p>Build intelligent systems and autonomous agents. Learn machine learning integration, natural language processing, and automation frameworks for modern AI applications.</p>
-    <div class="topic-highlights">
-      <span class="highlight">Intelligent Systems</span>
-      <span class="highlight">Automation</span>
-      <span class="highlight">ML Integration</span>
-    </div>
-    <a href="/ai-agent/" class="topic-button">Explore AI Agents →</a>
+</section>
+
+<section aria-label="Topics">
+  <div class="topic-grid single-topic">
+    <article class="topic-card featured">
+      <span class="topic-icon" role="img" aria-label="Rust and Solana">🦀⚡</span>
+      <h3>Rust &amp; Solana Engineering</h3>
+      <p>Systems-grade code for builders shipping on Solana: Rust generics, account safety, program patterns, testing flows, and deployment pipelines.</p>
+      <div class="topic-highlights">
+        <span class="highlight">Solana Programs</span>
+        <span class="highlight">On-chain Safety</span>
+        <span class="highlight">Performance Tuning</span>
+        <span class="highlight">Rust Generics</span>
+        <span class="highlight">Testing Patterns</span>
+      </div>
+      <a class="topic-button" href="{{ '/rust-solana/' | relative_url }}">View Rust &amp; Solana Posts →</a>
+    </article>
   </div>
-</div>
+</section>
 
 <style>
-.topic-selection {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 2em;
-  margin: 3em auto;
-  max-width: 900px;
+.topic-grid.single-topic {
+  display: flex;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.topic-card {
-  padding: 2em;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-  border: 1px solid #e9ecef;
+.topic-card.featured {
+  max-width: 100%;
+  transform: scale(1.05);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
-.topic-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
-.rust-solana {
-  border-left: 4px solid #3498db;
-}
-
-.ai-agent {
-  border-left: 4px solid #e74c3c;
-}
-
-.topic-icon {
-  font-size: 3em;
-  margin-bottom: 0.5em;
-}
-
-.topic-card h3 {
-  color: #2c3e50;
-  margin-bottom: 1em;
-  font-size: 1.4em;
-}
-
-.topic-card p {
-  color: #555;
-  line-height: 1.6;
-  margin-bottom: 1.5em;
-}
-
-.topic-highlights {
-  margin-bottom: 2em;
-}
-
-.highlight {
-  display: inline-block;
-  background-color: #ecf0f1;
-  color: #2c3e50;
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 0.85em;
-  margin: 0.2em;
-  font-weight: 500;
-}
-
-.rust-solana .highlight {
-  background-color: #e3f2fd;
-  color: #1976d2;
-}
-
-.ai-agent .highlight {
-  background-color: #ffebee;
-  color: #c62828;
-}
-
-.topic-button {
-  display: inline-block;
+.hero-actions .primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
   padding: 12px 24px;
-  border-radius: 6px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
-  transition: all 0.3s ease;
-  color: white;
+  transition: transform 0.2s ease;
 }
 
-.rust-solana .topic-button {
-  background-color: #3498db;
-}
-
-.rust-solana .topic-button:hover {
-  background-color: #2980b9;
-  text-decoration: none;
-}
-
-.ai-agent .topic-button {
-  background-color: #e74c3c;
-}
-
-.ai-agent .topic-button:hover {
-  background-color: #c0392b;
-  text-decoration: none;
-}
-
-@media (max-width: 768px) {
-  .topic-selection {
-    grid-template-columns: 1fr;
-  }
-  
-  .topic-card {
-    padding: 1.5em;
-  }
+.hero-actions .primary:hover {
+  transform: translateY(-2px);
 }
 </style>

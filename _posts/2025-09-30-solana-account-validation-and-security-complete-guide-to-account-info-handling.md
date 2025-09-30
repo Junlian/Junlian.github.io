@@ -33,12 +33,6 @@ This report will provide a detailed exploration of how account infos are passed 
 
 By the end of this report, readers will gain a comprehensive understanding of how to securely pass and validate account infos in Solana smart contracts using Rust. The accompanying code examples and project structure will serve as a practical guide for developers building high-performance decentralized applications (dApps) on Solana.
 
-
-
-
-
-
-
 ## Account Data Validation and Serialization in Solana Programs
 
 ### Understanding Account Data Validation in Solana
@@ -220,7 +214,6 @@ fn custom_serialize(data: &MyStruct) -> Vec<u8> {
 ```
 
 By following these techniques, developers can build robust and secure Solana programs that handle account data effectively.
-
 
 ## Instruction Handling and Account Meta Validation in Solana Smart Contracts
 
@@ -434,7 +427,6 @@ This modular structure separates concerns, making the program easier to test and
 ---
 
 By focusing on instruction handling and `AccountMeta` validation, this report provides a comprehensive guide for secure and efficient Solana program development, distinct from the existing content on account data validation and serialization.
-
 
 ## Project Structure for Solana Programs in Rust
 

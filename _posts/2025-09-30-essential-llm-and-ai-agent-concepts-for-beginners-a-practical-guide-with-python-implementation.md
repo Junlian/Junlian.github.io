@@ -22,50 +22,6 @@ Python has emerged as the preferred language for developing AI agents due to its
 
 This report provides a comprehensive foundation in LLM and AI agent concepts, accompanied by practical Python code demonstrations and project structure guidance. The following sections will explore each component in detail, offering hands-on examples that beginners can implement to build their first AI agents from scratch, while also understanding the architectural considerations for scalable and maintainable AI systems ([Thakur, 2024](https://rohankumarthakur.co.in/blog/basic-ai-agent); [Diamant, 2025](https://diamantai.substack.com/p/your-first-ai-agent-simpler-than)).
 
-## Table of Contents
-
-- Core Concepts and Architecture of LLM AI Agents
-    - Foundational Components of LLM Agents
-    - Architectural Patterns and Implementation Frameworks
-- Initialize LLM
-- Define tools
-- Initialize agent
-- Execute task
-    - Memory Systems and Context Management
-- Add memory to agent
-- Execute with memory context
-    - Tool Design and Integration Patterns
-    - Performance Optimization and Scalability Considerations
-- Performance monitoring decorator
-- Apply to tools
-    - Building a Basic AI Agent from Scratch with Python
-        - Essential Components for Implementation
-        - Project Structure and Organization
-        - Core Implementation Code
-- Example usage
-    - Tool Development and Integration
-    - Testing and Debugging Strategies
-    - Performance Considerations and Optimization
-    - Using Frameworks for Advanced AI Agent Development
-        - Framework Selection Criteria for Production Environments
-        - Advanced Multi-Agent System Implementation
-- Load LLM configuration
-- Define specialized agents
-- User proxy for human interaction
-- Initiate multi-agent collaboration
-    - Enterprise-Grade Deployment Patterns
-- Enterprise deployment configuration
-    - Framework Integration and Extension Development
-- Custom agent with extended capabilities
-    - Performance Optimization and Scaling Strategies
-- Advanced scaling configuration
-- Framework-specific metrics
-- Integration with framework lifecycle
-
-
-
-
-
 ## Core Concepts and Architecture of LLM AI Agents
 
 ### Foundational Components of LLM Agents
@@ -215,7 +171,6 @@ def enhanced_search_tool(query):
     # Implementation with caching and error handling
     pass
 ```
-
 
 ## Building a Basic AI Agent from Scratch with Python
 
@@ -388,7 +343,6 @@ Cost management involves monitoring API usage and implementing rate limiting. Se
 | Efficiency | Model selection | Appropriate resource use |
 
 Implementing these optimizations early in development establishes good practices and prevents performance issues as the agent grows in complexity. Regular monitoring and adjustment based on actual usage patterns ensures continued efficient operation.
-
 
 ## Using Frameworks for Advanced AI Agent Development
 
@@ -718,21 +672,3 @@ The most critical findings indicate that beginners should prioritize understandi
 
 For next steps, beginners should focus on implementing the basic agent architecture from scratch to solidify understanding before progressing to framework-based development. Practical projects should incorporate testing strategies for non-deterministic systems, implement performance monitoring, and gradually introduce advanced features like multi-agent collaboration or enterprise security patterns ([How to Build Reliable AI Agents in 2025](https://www.youtube.com/watch?v=T1Lowy1mnEg); [Production AI Agent Deployment](https://superprompt.com/blog/how-to-build-ai-agents-2025-guide)). Future learning should explore distributed execution patterns, advanced optimization techniques, and integration with existing enterprise systems as agents scale in complexity and deployment requirements.
 
-
-## References
-
-- [https://www.turing.com/resources/ai-agent-frameworks](https://www.turing.com/resources/ai-agent-frameworks)
-- [https://www.analyticsvidhya.com/blog/2024/07/ai-agent-frameworks/](https://www.analyticsvidhya.com/blog/2024/07/ai-agent-frameworks/)
-- [https://latenode.com/blog/best-ai-agent-frameworks-2025-complete-developers-guide](https://latenode.com/blog/best-ai-agent-frameworks-2025-complete-developers-guide)
-- [https://apipie.ai/docs/blog/top-10-opensource-ai-agent-frameworks-may-2025](https://apipie.ai/docs/blog/top-10-opensource-ai-agent-frameworks-may-2025)
-- [https://medium.com/@iamanraghuvanshi/agentic-ai-3-top-ai-agent-frameworks-in-2025-langchain-autogen-crewai-beyond-2fc3388e7dec](https://medium.com/@iamanraghuvanshi/agentic-ai-3-top-ai-agent-frameworks-in-2025-langchain-autogen-crewai-beyond-2fc3388e7dec)
-- [https://www.pondhouse-data.com/blog/ai-agents-from-scratch](https://www.pondhouse-data.com/blog/ai-agents-from-scratch)
-- [https://www.youtube.com/watch?v=zOFxHmjIhvY](https://www.youtube.com/watch?v=zOFxHmjIhvY)
-- [https://latenode.com/blog/langchain-python-tutorial-complete-beginners-guide-to-getting-started](https://latenode.com/blog/langchain-python-tutorial-complete-beginners-guide-to-getting-started)
-- [https://medium.com/@speaktoharisudhan/build-an-agent-orchestrator-in-python-with-semantic-kernel-bb271d8f32e1](https://medium.com/@speaktoharisudhan/build-an-agent-orchestrator-in-python-with-semantic-kernel-bb271d8f32e1)
-- [https://blog.n8n.io/how-to-build-ai-agent/](https://blog.n8n.io/how-to-build-ai-agent/)
-- [https://superprompt.com/blog/how-to-build-ai-agents-2025-guide](https://superprompt.com/blog/how-to-build-ai-agents-2025-guide)
-- [https://www.codecademy.com/article/autogen-tutorial-build-ai-agents](https://www.codecademy.com/article/autogen-tutorial-build-ai-agents)
-- [https://www.lindy.ai/blog/best-ai-agent-frameworks](https://www.lindy.ai/blog/best-ai-agent-frameworks)
-- [https://www.youtube.com/watch?v=bZzyPscbtI8](https://www.youtube.com/watch?v=bZzyPscbtI8)
-- [https://www.siddharthbharath.com/ultimate-guide-ai-agents/](https://www.siddharthbharath.com/ultimate-guide-ai-agents/)

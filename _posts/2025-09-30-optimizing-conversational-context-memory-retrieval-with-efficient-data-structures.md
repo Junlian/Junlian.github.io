@@ -85,32 +85,6 @@ conversation_memory/
 
 This structure supports modularity and scalability, allowing components like the vector database to be swapped for production deployments (e.g., using Pinecone for cloud-scale ANN) ([Garg, 2025](https://www.gocodeo.com/post/top-5-vector-databases-to-use-in-2025)). By combining data structures tailored for temporal recency and semantic relevance, conversational systems achieve efficient memory retrieval with optimal resource usage.
 
-## Table of Contents
-
-- Implementing Conversation Buffer Memory for Complete Context Retention
-    - Core Data Structures for Efficient Buffer Management
-    - Token-Aware Memory Management System
-    - Hybrid Storage Architecture for Production Deployment
-    - Performance Optimization Techniques
-    - Project Structure for Scalable Implementation
-- config/production.yaml
-    - Optimize Memory Usage with Token-Aware Buffer Management
-        - Advanced Token Counting and Estimation Algorithms
-        - Dynamic Token Budget Allocation Strategies
-        - Intelligent Message Pruning and Compression Techniques
-        - Multi-Model Token Optimization Framework
-        - Real-Time Token Monitoring and Adaptive Adjustment Systems
-    - Integrating Vector Databases for Efficient Semantic Memory Retrieval
-        - Vector Database Architecture for Conversational Context
-        - Performance-Optimized Indexing Strategies
-        - Hybrid Search Integration with Temporal Filtering
-        - Scalability and Distributed Architecture
-        - Production-Grade Optimization Techniques
-
-
-
-
-
 ## Implementing Conversation Buffer Memory for Complete Context Retention
 
 ### Core Data Structures for Efficient Buffer Management
@@ -430,7 +404,6 @@ caching:
 
 This project structure enables **horizontal scaling** through distributed caching and database replication, supporting conversation volumes exceeding 1 million daily interactions while maintaining sub-100ms response times for memory retrieval operations ([Comet Scaling Guide](https://www.comet.com/site/blog/enhance-conversational-agents-with-langchain-memory/)).
 
-
 ## Optimize Memory Usage with Token-Aware Buffer Management
 
 ### Advanced Token Counting and Estimation Algorithms
@@ -699,7 +672,6 @@ class TokenMonitoringSystem:
 
 This real-time monitoring reduces token waste by 22-38% through immediate adjustment to changing conversation patterns, significantly improving cost efficiency in production deployments ([Medium](https://medium.com/@pani.chinmaya/memory-for-your-rag-based-chat-bot-using-langchain-b4d720031671)).
 
-
 ## Integrating Vector Databases for Efficient Semantic Memory Retrieval
 
 ### Vector Database Architecture for Conversational Context
@@ -897,21 +869,3 @@ The most significant findings reveal that intelligent compression techniques can
 
 These findings have substantial implications for developing production-ready conversational systems, particularly regarding cost efficiency and scalability. Next steps should focus on implementing adaptive learning mechanisms that continuously optimize memory strategies based on conversation patterns, and exploring federated vector database architectures for global-scale deployments. Additionally, research into quantum-inspired similarity search algorithms could potentially achieve exponential improvements in retrieval performance for extremely large conversation histories ([Timescale Vector Features](https://www.tigerdata.com/blog/a-python-library-for-using-postgresql-as-a-vector-database-in-ai-applications); [Production Optimization Guide](https://www.gocloud7.com/adding-context-to-a-rag-based-chatbot-using-python-and-faiss-part-2)).
 
-
-## References
-
-- [https://www.tigerdata.com/blog/a-python-library-for-using-postgresql-as-a-vector-database-in-ai-applications](https://www.tigerdata.com/blog/a-python-library-for-using-postgresql-as-a-vector-database-in-ai-applications)
-- [https://www.reddit.com/r/LangChain/comments/121w2tu/chatbot_with_memory_vector_database_search_at_the/](https://www.reddit.com/r/LangChain/comments/121w2tu/chatbot_with_memory_vector_database_search_at_the/)
-- [https://www.nb-data.com/p/simple-rag-implementation-with-contextual](https://www.nb-data.com/p/simple-rag-implementation-with-contextual)
-- [https://research.aimultiple.com/open-source-vector-databases/](https://research.aimultiple.com/open-source-vector-databases/)
-- [https://www.gocloud7.com/adding-context-to-a-rag-based-chatbot-using-python-and-faiss-part-2/](https://www.gocloud7.com/adding-context-to-a-rag-based-chatbot-using-python-and-faiss-part-2/)
-- [https://www.abovo.co/sean@abovo42.com/134573](https://www.abovo.co/sean@abovo42.com/134573)
-- [https://db-blog.web.cern.ch/node/191](https://db-blog.web.cern.ch/node/191)
-- [https://medium.com/data-science/how-to-implement-graph-rag-using-knowledge-graphs-and-vector-databases-60bb69a22759](https://medium.com/data-science/how-to-implement-graph-rag-using-knowledge-graphs-and-vector-databases-60bb69a22759)
-- [https://medium.com/h7w/building-semantic-memory-for-ai-agents-using-python-d38eed61d68c](https://medium.com/h7w/building-semantic-memory-for-ai-agents-using-python-d38eed61d68c)
-- [https://www.datacamp.com/blog/the-top-5-vector-databases](https://www.datacamp.com/blog/the-top-5-vector-databases)
-- [https://www.youtube.com/watch?v=EYkyljq5HeA](https://www.youtube.com/watch?v=EYkyljq5HeA)
-- [https://python.langchain.com/docs/tutorials/qa_chat_history/](https://python.langchain.com/docs/tutorials/qa_chat_history/)
-- [https://sangeethasaravanan.medium.com/building-a-simple-rag-app-using-langchain-chroma-and-groqs-mixtral-ee6504206a9d](https://sangeethasaravanan.medium.com/building-a-simple-rag-app-using-langchain-chroma-and-groqs-mixtral-ee6504206a9d)
-- [https://azumo.com/artificial-intelligence/ai-insights/top-vector-database-solutions](https://azumo.com/artificial-intelligence/ai-insights/top-vector-database-solutions)
-- [https://python.plainenglish.io/mastering-vector-databases-for-ai-applications-2cca53348f28](https://python.plainenglish.io/mastering-vector-databases-for-ai-applications-2cca53348f28)
