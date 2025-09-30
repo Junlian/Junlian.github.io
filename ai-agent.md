@@ -7,36 +7,26 @@ permalink: /ai-agent/
 
 # Hello World
 
-## 🎯 Core AI Agent Topics
+## 🛠️ Popular AI Frameworks & Tools
 
-<div class="topic-grid">
-  <div class="topic-card">
-    <h4>🧠 Agent Architecture</h4>
-    <p>Learn the fundamental patterns for building intelligent, autonomous systems that can reason and act.</p>
+<div class="tools-section">
+  <div class="tool-category">
+    <h4>🐍 Python Ecosystem</h4>
+    <ul>
+      <li>LangChain - Agent framework and LLM integration</li>
+      <li>OpenAI API - GPT models and function calling</li>
+      <li>Hugging Face - Pre-trained models and datasets</li>
+      <li>CrewAI - Multi-agent collaboration framework</li>
+    </ul>
   </div>
   
-  <div class="topic-card">
-    <h4>💬 Conversational AI</h4>
-    <p>Build chatbots, virtual assistants, and natural language interfaces using modern NLP techniques.</p>
-  </div>
-  
-  <div class="topic-card">
-    <h4>⚡ Automation Systems</h4>
-    <p>Create intelligent workflows that can adapt, learn, and optimize processes automatically.</p>
-  </div>
-  
-  <div class="topic-card">
-    <h4>🔗 Tool Integration</h4>
-    <p>Connect AI agents with external APIs, databases, and services for enhanced capabilities.</p>
-  </div>
-  
-  <div class="topic-card">
-    <h4>📊 Decision Making</h4>
-    <p>Implement reasoning systems that can evaluate options and make intelligent choices.</p>
-  </div>
-  
-  <div class="topic-card">
-    <h4>📈 Performance & Optimization</h4>
-    <p>Optimize your AI agents for speed, efficiency, and cost-effectiveness.</p>
+  <div class="tool-category">
+    <h4>🦀 Rust for AI</h4>
+    <ul>
+      <li>Candle - Machine learning framework in Rust</li>
+      <li>Tokio - Async runtime for AI services</li>
+      <li>Serde - Data serialization for AI pipelines</li>
+      <li>Reqwest - HTTP client for API integration</li>
+    </ul>
   </div>
 </div>
