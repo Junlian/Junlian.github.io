@@ -57,68 +57,7 @@ The following sections of this report will demonstrate how to:
 
 For more details on Solana's architecture and tools, refer to the [official Solana documentation](https://docs.solana.com/). By the end of this report, you will have a comprehensive understanding of how to build, deploy, and interact with Solana smart contracts in 2025.
 
-## Table of Contents
 
-- Setting Up the Solana Development Environment for Building Smart Contracts with <code>cargo build-bpf</code> in 2025
-    - Installing Required Toolchains and Dependencies
-        - Installing Rust and Cargo
-        - Installing Solana CLI
-        - Adding the BPF Toolchain
-    - Configuring the Project Structure
-        - Creating the Project
-        - Updating <code>Cargo.toml</code>
-        - Adding the Program Logic
-    - Building the Program with <code>cargo build-bpf</code>
-        - Understanding <code>cargo build-bpf</code>
-        - Running the Build Command
-        - Common Issues and Fixes
-    - Deploying the Program to the Blockchain
-        - Running a Local Validator
-        - Deploying the Program
-        - Verifying the Deployment
-    - Testing and Debugging the Program
-        - Writing Unit Tests
-- [cfg(test)]
-    - Debugging with Logs
-    - Common Debugging Issues
-    - Advanced Techniques for Building Solana Smart Contracts with <code>cargo build-bpf</code> in 2025
-        - Optimizing Build Configurations for <code>cargo build-bpf</code>
-            - Using Custom Compiler Flags
-            - Leveraging Cargo Features
-        - Modularizing Program Logic
-            - Creating Separate Modules for Instructions
-            - Using Custom Error Types
-- [derive(Error, Debug, Copy, Clone)]
-    - Advanced Testing Strategies for Solana Programs
-        - Writing Integration Tests
-- [tokio::test]
-    - Mocking Accounts
-    - Debugging Complex Issues with Enhanced Tooling
-        - Using the Solana Explorer for Logs
-        - Debugging with <code>solana-test-validator</code>
-    - Enhancing Deployment Pipelines
-        - Automating Deployment with CI/CD
-        - Verifying Deployment
-    - Compiling and Deploying the Program Using <code>cargo build-bpf</code> in 2025
-        - Enhancing Build Process with Optimized Compilation Flags
-            - Setting Custom Compiler Flags
-            - Using <code>cargo build-bpf</code> with Verbosity
-        - Integrating Dependency Management for BPF Builds
-            - Specifying Dependency Versions
-            - Resolving Dependency Conflicts
-        - Advanced Techniques for Bytecode Optimization
-            - Stripping Unused Code
-            - Analyzing Bytecode
-        - Automating the Build Process with CI/CD Pipelines
-            - Setting Up GitHub Actions
-            - Monitoring Build Status
-        - Deploying the Compiled Program to Solana Devnet
-            - Preparing the Environment
-            - Deploying the Program
-            - Verifying Deployment
-        - Interacting with the Deployed Program
-            - Writing the Client
-            - Running the Client
 
 
 
@@ -722,19 +661,3 @@ This research provides a comprehensive guide to building Solana smart contracts 
 The research also highlights advanced testing strategies using the `solana-program-test` crate, which enables developers to simulate real-world blockchain interactions and write robust integration tests. Additionally, it explores the use of CI/CD pipelines, such as those implemented with [GitHub Actions](https://github.com/features/actions), to automate the build, test, and deployment processes. These practices not only enhance development efficiency but also ensure the reliability of smart contracts before deployment to the blockchain. Furthermore, the report underscores the importance of debugging tools like `solana-test-validator` and log analysis via the [Solana Explorer](https://explorer.solana.com/) for resolving complex issues during development.
 
 The findings have significant implications for Solana developers aiming to build scalable and maintainable programs. By adopting modular code structures, optimizing bytecode, and automating workflows, developers can reduce costs, improve performance, and accelerate deployment timelines. Future steps include exploring more advanced features of the Solana ecosystem, such as custom instruction sets and enhanced security practices, to further refine smart contract development. This research serves as a foundational resource for developers looking to master Solana smart contract development in 2025 and beyond.
-
-
-## References
-
-- [https://ftp.spaceneedle.com/Download_PDFS/mLA93D/605264/Solana%20Development%20With%20Rust%20And%20Anchor.pdf](https://ftp.spaceneedle.com/Download_PDFS/mLA93D/605264/Solana%20Development%20With%20Rust%20And%20Anchor.pdf)
-- [https://www.quillaudits.com/blog/blockchain/building-on-solana-using-rust-anchor](https://www.quillaudits.com/blog/blockchain/building-on-solana-using-rust-anchor)
-- [https://medium.com/coinmonks/a-comprehensive-guide-to-solana-development-with-rust-installation-and-first-program-deployment-f6f244a22ca1](https://medium.com/coinmonks/a-comprehensive-guide-to-solana-development-with-rust-installation-and-first-program-deployment-f6f244a22ca1)
-- [https://stackoverflow.com/questions/74246140/difference-between-cargo-build-cargo-build-bpf-and-cargo-build-sbf](https://stackoverflow.com/questions/74246140/difference-between-cargo-build-cargo-build-bpf-and-cargo-build-sbf)
-- [https://solana.stackexchange.com/questions/7199/cargo-build-bpf-rustc-version](https://solana.stackexchange.com/questions/7199/cargo-build-bpf-rustc-version)
-- [https://www.youtube.com/watch?v=iLgU1J7WMQY](https://www.youtube.com/watch?v=iLgU1J7WMQY)
-- [https://www.risein.com/blog/getting-started-with-development-on-solana](https://www.risein.com/blog/getting-started-with-development-on-solana)
-- [https://serokell.io/blog/solana-smart-contract-guide](https://serokell.io/blog/solana-smart-contract-guide)
-- [https://remoteprogrammer.com/blog/developing-your-first-application-for-solana-blockchain-network](https://remoteprogrammer.com/blog/developing-your-first-application-for-solana-blockchain-network)
-- [https://solana.com/docs/programs/rust](https://solana.com/docs/programs/rust)
-- [https://solana.stackexchange.com/questions/4309/solana-helloworld-example-stuck-on-cargo-build-bpf-without-error-message](https://solana.stackexchange.com/questions/4309/solana-helloworld-example-stuck-on-cargo-build-bpf-without-error-message)
-- [https://stackoverflow.com/questions/79529769/how-to-build-solana-contracts](https://stackoverflow.com/questions/79529769/how-to-build-solana-contracts)

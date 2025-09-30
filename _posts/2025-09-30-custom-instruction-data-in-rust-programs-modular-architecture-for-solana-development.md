@@ -25,72 +25,6 @@ To achieve this, the report will guide you through the following steps:
 
 By the end of this report, you will have a clear understanding of how to enhance a Rust program with custom instruction data, supported by a modular project structure. This knowledge will empower you to build scalable and extensible applications, whether for blockchain development or other domains requiring complex instruction handling.
 
-## Table of Contents
-
-- Setting Up a Modular Rust Project Structure
-    - Modularizing Code for Custom Instruction Data
-    - Defining the Core Modules
-        - 1. <strong>Entrypoint Module</strong>
-        - 2. <strong>Instruction Module</strong>
-- [derive(BorshSerialize, BorshDeserialize, Debug)]
-    - 3. <strong>Processor Module</strong>
-    - 4. <strong>State Module</strong>
-- [derive(BorshSerialize, BorshDeserialize, Debug)]
-    - 5. <strong>Error Module</strong>
-- [derive(Error, Debug, Copy, Clone)]
-    - Organizing the File System
-    - Adding Dependencies
-    - Testing the Modular Structure
-        - Example: Testing the Processor Module
-- [cfg(test)]
-    - Re-exporting Modules for Simplicity
-    - Feature Gating for Experimental Modules
-        - Example: Adding a Feature Flag
-- [cfg(feature = "experimental")]
-    - Adding Custom Instruction Data to a Rust Program
-        - Handling Instruction Data with Structs and Enums
-            - Defining Instruction Data
-- [derive(BorshSerialize, BorshDeserialize, Debug)]
-    - Serializing and Deserializing Instruction Data
-    - Integrating Instruction Handlers in the Entrypoint
-        - Registering the Entrypoint
-        - Handling Custom Instructions
-    - Testing Instruction Data Handling
-        - Unit Testing Instruction Serialization
-- [cfg(test)]
-    - Integration Testing Instruction Handlers
-- [cfg(test)]
-    - Organizing Instruction Data in the Project Structure
-        - Creating a Dedicated Instruction Module
-- [derive(BorshSerialize, BorshDeserialize, Debug)]
-    - Updating the Entrypoint to Use the Module
-    - Advanced Features: Instruction Metadata and Validation
-        - Adding Metadata to Instructions
-- [derive(BorshSerialize, BorshDeserialize, Debug)]
-- [derive(BorshSerialize, BorshDeserialize, Debug)]
-    - Validating Instruction Data
-    - Implementing and Testing Instruction Handlers in Rust
-        - Structuring Instruction Handlers for Custom Logic
-            - Creating a Processor Module for Instruction Handlers
-        - Integrating Instruction Handlers in the Entrypoint
-        - Testing Instruction Handlers
-            - Unit Testing Instruction Handlers
-- [cfg(test)]
-    - Integration Testing Instruction Handlers
-- [test]
-- [test]
-    - Handling Errors in Instruction Handlers
-- [derive(Error, Debug, Copy, Clone)]
-    - Advanced Features for Instruction Handlers
-        - Logging Instruction Data
-        - Validating Instruction Data
-        - Using Feature Flags for Experimental Handlers
-- [cfg(feature = "experimental")]
-
-
-
-
-
 ## Setting Up a Modular Rust Project Structure
 
 ### Modularizing Code for Custom Instruction Data
@@ -909,25 +843,3 @@ By implementing and testing instruction handlers with these techniques, you can 
 This research outlines a comprehensive approach to updating a Rust program to handle custom instruction data, emphasizing the importance of a modular project structure for maintainability, scalability, and clarity. Key modules such as `entrypoint`, `instructions`, `processor`, `state`, and `error` were identified as essential components for organizing the codebase effectively. Each module serves a specific purpose: the `entrypoint` routes incoming instructions, the `instructions` module defines custom instruction data using enums and structs, the `processor` handles business logic, the `state` module manages account data, and the `error` module improves error handling with descriptive messages. This modular structure, combined with the use of crates like `borsh` for serialization and `thiserror` for error management, ensures a clean and extensible codebase. For more details on modular Rust project design, refer to [Solana's program structure documentation](https://solana.com/docs/programs/rust/program-structure).
 
 The research also highlights advanced features such as instruction metadata, validation, and feature gating, which enhance the program's functionality and reliability. The inclusion of metadata allows for additional context, while validation ensures that instruction data meets specific criteria before processing. Testing was emphasized as a critical practice, with examples of both unit and integration tests provided to validate instruction serialization, deserialization, and handler logic. These practices align with Rust's best practices for testing, as outlined in the [Rust testing documentation](https://doc.rust-lang.org/rust-by-example/testing.html). The next steps involve applying these principles to real-world Solana programs, ensuring robust instruction handling and exploring further optimizations like experimental feature flags to safely test new functionality. By following these guidelines, developers can build scalable and maintainable Rust programs that effectively handle custom instruction data.
-
-
-## References
-
-- [https://os.phil-opp.com/testing/](https://os.phil-opp.com/testing/)
-- [https://solana.com/developers/courses/native-onchain-development/deserialize-instruction-data](https://solana.com/developers/courses/native-onchain-development/deserialize-instruction-data)
-- [https://users.rust-lang.org/t/custom-cpu-instructions-with-asm/66637](https://users.rust-lang.org/t/custom-cpu-instructions-with-asm/66637)
-- [https://medium.com/codex/rust-modules-and-project-structure-832404a33e2e](https://medium.com/codex/rust-modules-and-project-structure-832404a33e2e)
-- [https://rust-cli.github.io/book/tutorial/testing.html](https://rust-cli.github.io/book/tutorial/testing.html)
-- [https://www.youtube.com/watch?v=LRfDAZfo00o](https://www.youtube.com/watch?v=LRfDAZfo00o)
-- [https://dev.to/cogoo/solana-how-to-send-custom-instructions-via-instruction-data-4g9g](https://dev.to/cogoo/solana-how-to-send-custom-instructions-via-instruction-data-4g9g)
-- [https://medium.com/@danmugh/rust-for-beginners-dive-into-coding-with-these-5-projects-to-boost-your-skills-7307e7923d74](https://medium.com/@danmugh/rust-for-beginners-dive-into-coding-with-these-5-projects-to-boost-your-skills-7307e7923d74)
-- [https://doc.rust-lang.org/rust-by-example/testing.html](https://doc.rust-lang.org/rust-by-example/testing.html)
-- [https://dev.to/sgchris/how-to-structure-a-rust-project-idiomatically-500k](https://dev.to/sgchris/how-to-structure-a-rust-project-idiomatically-500k)
-- [https://users.rust-lang.org/t/project-structure-best-practices/37575](https://users.rust-lang.org/t/project-structure-best-practices/37575)
-- [https://www.youtube.com/watch?v=oxx7MmN4Ib0](https://www.youtube.com/watch?v=oxx7MmN4Ib0)
-- [https://www.reddit.com/r/rust/comments/185pdyr/project_structure_in_rust/](https://www.reddit.com/r/rust/comments/185pdyr/project_structure_in_rust/)
-- [https://m.youtube.com/watch?v=8XaVlL3lObQ&pp=ygULI2tvc3R5YXJ1c3Q%3D](https://m.youtube.com/watch?v=8XaVlL3lObQ&pp=ygULI2tvc3R5YXJ1c3Q%3D)
-- [https://solana.com/docs/programs/rust/program-structure](https://solana.com/docs/programs/rust/program-structure)
-- [https://www.rapidinnovation.io/post/testing-and-debugging-rust-code](https://www.rapidinnovation.io/post/testing-and-debugging-rust-code)
-- [https://www.youtube.com/watch?v=UyJ1mEqKMvE](https://www.youtube.com/watch?v=UyJ1mEqKMvE)
-- [https://dev.to/ghost/rust-project-structure-example-step-by-step-3ee](https://dev.to/ghost/rust-project-structure-example-step-by-step-3ee)

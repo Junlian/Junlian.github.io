@@ -31,69 +31,7 @@ This report will provide a detailed exploration of how account infos are passed 
 
 By the end of this report, readers will gain a comprehensive understanding of how to securely pass and validate account infos in Solana smart contracts using Rust. The accompanying code examples and project structure will serve as a practical guide for developers building high-performance decentralized applications (dApps) on Solana.
 
-## Table of Contents
 
-- Account Data Validation and Serialization in Solana Programs
-    - Understanding Account Data Validation in Solana
-        - 1. Account Ownership and Program Validation
-        - 2. Account Initialization Checks
-        - 3. Signer and Writable Account Validation
-    - Serialization and Deserialization of Account Data
-        - 1. Implementing the <code>Pack</code> Trait
-        - 2. Handling Uninitialized Data
-    - Common Vulnerabilities in Account Data Handling
-        - 1. Account Type Confusion
-        - 2. PDA Validation Failures
-        - 3. Unsafe Account Reallocation
-    - Best Practices for Account Data Validation and Serialization
-        - 1. Use Checked Arithmetic
-        - 2. Validate All Inputs
-        - 3. Test Serialization and Deserialization
-    - Advanced Techniques for Account Data Handling
-        - 1. Account Reloading
-        - 2. Using BTreeMap for Efficient Storage
-        - 3. Custom Serialization Formats
-- Instruction Handling and Account Meta Validation in Solana Smart Contracts
-    - Instruction Data Structuring and Deserialization
-        - Structuring Instruction Data
-- [derive(BorshDeserialize, BorshSerialize)]
-    - Deserialization Process
-    - Security Considerations
-    - AccountMeta Validation in Instructions
-        - Understanding AccountMeta
-        - Validating Signer and Writable Flags
-        - Common Pitfalls
-    - Instruction Execution Flow
-        - Fetching Accounts
-        - Instruction Routing
-    - Advanced Account Meta Validation Techniques
-        - PDA Validation
-        - Canonical Seed Validation
-    - Project Structure for Instruction Handling
-        - Directory Layout
-        - Example <code>instruction.rs</code>
-- [derive(BorshDeserialize, BorshSerialize)]
-    - Example <code>processor.rs</code>
-    - Example <code>validation.rs</code>
-    - Project Structure for Solana Programs in Rust
-        - Organizing Rust-Based Solana Projects
-    - <strong>1. Core Project Files and Directories</strong>
-        - <strong>1.1 lib.rs: The Program Entrypoint</strong>
-        - <strong>1.2 Directory Layout</strong>
-    - <strong>2. Instruction Handling and Account Validation</strong>
-        - <strong>2.1 Instruction Routing</strong>
-        - <strong>2.2 Instruction Handlers</strong>
-    - <strong>3. Account Data Structures</strong>
-        - <strong>3.1 Defining Account Data</strong>
-- [derive(BorshDeserialize, BorshSerialize, Debug)]
-    - <strong>3.2 Serialization and Deserialization</strong>
-    - <strong>4. Error Handling</strong>
-        - <strong>4.1 Centralized Error Definitions</strong>
-- [derive(Error, Debug, Copy, Clone)]
-    - <strong>5. Utilities and Testing</strong>
-        - <strong>5.1 Utility Functions</strong>
-        - <strong>5.2 Testing</strong>
-- [cfg(test)]
 
 
 
@@ -709,26 +647,3 @@ This research highlights the critical aspects of account information passing and
 The report also emphasizes the importance of serialization and deserialization for structured account data management, with libraries like [Borsh](https://borsh.io/) playing a pivotal role. Implementing traits like `Pack` ensures efficient and secure data handling, while advanced techniques such as account reloading and custom serialization formats enhance program robustness. Furthermore, a modular project structure is recommended for scalability, with directories dedicated to instructions, state, validation, and utilities. This structure, combined with rigorous testing and centralized error handling, ensures maintainable and secure Solana programs. For further guidance on project organization, refer to the [Solana program structure documentation](https://solana.com/docs/programs/rust/program-structure).
 
 The findings underscore the need for meticulous validation and modular design in Solana smart contract development. Developers should prioritize secure account handling practices, adopt efficient serialization methods, and follow best practices for instruction routing and error management. Future work could explore integrating advanced tools like [Anchor](https://www.helius.dev/blog/an-introduction-to-anchor-a-beginners-guide-to-building-solana-programs) for simplifying account validation and instruction handling, as well as leveraging dynamic storage solutions like `BTreeMap` for complex data management. By adhering to these principles, developers can build robust, scalable, and secure Solana programs.
-
-
-## References
-
-- [https://blog.blockmagnates.com/build-solana-programs-in-rust-c2439f8d7114](https://blog.blockmagnates.com/build-solana-programs-in-rust-c2439f8d7114)
-- [https://solana.stackexchange.com/questions/657/can-i-call-get-account-info-in-instruction-in-rust](https://solana.stackexchange.com/questions/657/can-i-call-get-account-info-in-instruction-in-rust)
-- [https://www.altcoinalchemy.com/blog/development/Mastering-Solana-Program-Development-Key-Concepts-and-Best-Practices-in-Rust](https://www.altcoinalchemy.com/blog/development/Mastering-Solana-Program-Development-Key-Concepts-and-Best-Practices-in-Rust)
-- [https://github.com/InfectedIsm/solana-quick-start-guide](https://github.com/InfectedIsm/solana-quick-start-guide)
-- [https://betterprogramming.pub/solana-programming-primer-1c8aae509346](https://betterprogramming.pub/solana-programming-primer-1c8aae509346)
-- [https://blog.blockmagnates.com/solana-program-instructions-83f5d1edb1fe](https://blog.blockmagnates.com/solana-program-instructions-83f5d1edb1fe)
-- [https://ututuv.medium.com/building-a-crud-smart-contract-on-solana-with-rust-anchor-a78c64ed8f42](https://ututuv.medium.com/building-a-crud-smart-contract-on-solana-with-rust-anchor-a78c64ed8f42)
-- [https://unrealtechblog.hashnode.dev/build-on-solana-from-rust-basics-to-advanced-development](https://unrealtechblog.hashnode.dev/build-on-solana-from-rust-basics-to-advanced-development)
-- [https://medium.com/@ancilartech/getting-started-with-solana-programs-in-rust-a-step-by-step-guide-for-high-performance-dapp-ebcea2111e60](https://medium.com/@ancilartech/getting-started-with-solana-programs-in-rust-a-step-by-step-guide-for-high-performance-dapp-ebcea2111e60)
-- [https://solana.com/hi/developers/courses/native-onchain-development/program-security](https://solana.com/hi/developers/courses/native-onchain-development/program-security)
-- [https://github.com/0xekez/simple-solana-program](https://github.com/0xekez/simple-solana-program)
-- [https://ftp.spaceneedle.com/scholarship/mLA93D/605264/Solana%20Development%20With%20Rust%20And%20Anchor.pdf](https://ftp.spaceneedle.com/scholarship/mLA93D/605264/Solana%20Development%20With%20Rust%20And%20Anchor.pdf)
-- [https://docs.rs/solana-program/latest/solana_program/instruction/struct.Instruction.html](https://docs.rs/solana-program/latest/solana_program/instruction/struct.Instruction.html)
-- [https://stackoverflow.com/questions/68733137/how-do-solana-rust-smart-contracts-handle-arrays-and-vectors](https://stackoverflow.com/questions/68733137/how-do-solana-rust-smart-contracts-handle-arrays-and-vectors)
-- [https://solana.com/docs/programs/rust](https://solana.com/docs/programs/rust)
-- [https://solana.com/docs/programs/rust/program-structure](https://solana.com/docs/programs/rust/program-structure)
-- [https://medium.com/@connect.hashblock/how-i-wrote-my-first-smart-contract-in-rust-for-solana-without-losing-my-mind-b186199777eb](https://medium.com/@connect.hashblock/how-i-wrote-my-first-smart-contract-in-rust-for-solana-without-losing-my-mind-b186199777eb)
-- [https://solana.com/developers/courses/native-onchain-development/hello-world-program](https://solana.com/developers/courses/native-onchain-development/hello-world-program)
-- [https://www.helius.dev/blog/an-introduction-to-anchor-a-beginners-guide-to-building-solana-programs](https://www.helius.dev/blog/an-introduction-to-anchor-a-beginners-guide-to-building-solana-programs)
