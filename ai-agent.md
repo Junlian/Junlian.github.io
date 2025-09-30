@@ -7,9 +7,11 @@ permalink: /ai-agent/
 
 # Hello World
 
-<p>This is a test paragraph.</p>
+## Core AI Agent Topics
 
-<ul>
-  <li>Item 1</li>
-  <li>Item 2</li>
-</ul>
+* Agent Architecture
+* Conversational AI
+* Automation Systems
+* Tool Integration
+* Decision Making
+* Performance & Optimization
