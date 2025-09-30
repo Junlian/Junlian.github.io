@@ -5,9 +5,8 @@ permalink: /:title/
 paginate: 5
 
 # Analytics Configuration
-# Replace 'G-XXXXXXXXXX' with your actual Google Analytics 4 Measurement ID
-# To get your GA4 ID: https://analytics.google.com -> Admin -> Data Streams -> Web -> Measurement ID
-google_analytics: G-XXXXXXXXXX
+# Google Analytics 4 Measurement ID for visitor tracking
+google_analytics: G-QQ6X3F3TWM
 
 # Alternative Analytics (optional)
 # plausible_domain: junlian.github.io
