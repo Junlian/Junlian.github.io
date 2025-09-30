@@ -10,7 +10,7 @@ description: "Master Rust & Solana development and AI agent systems with curated
   <p class="hero-lede">Deep-dive into cutting-edge technologies: Rust & Solana blockchain development and intelligent AI agent systems. Explore hands-on guides, architectural patterns, and production-ready implementations.</p>
   <div class="hero-actions">
     <a class="primary" href="{{ '/rust-solana/' | relative_url }}">Rust &amp; Solana</a>
-    <a class="secondary" href="{{ '/ai-agent/' | relative_url }}">AI Agents</a>
+    <a class="secondary" href="https://junlian.github.io/ai-agent-react/">AI Agents</a>
   </div>
 </section>
 
@@ -41,7 +41,7 @@ description: "Master Rust & Solana development and AI agent systems with curated
         <span class="highlight">Conversational AI</span>
         <span class="highlight">Performance Optimization</span>
       </div>
-      <a class="topic-button" href="{{ '/ai-agent/' | relative_url }}">View AI Agent Posts →</a>
+      <a class="topic-button" href="https://junlian.github.io/ai-agent-react/">View AI Agent Posts →</a>
     </article>
   </div>
 </section>
