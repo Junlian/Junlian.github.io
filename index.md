@@ -36,73 +36,13 @@ Explore our comprehensive content organized by main topics. Select the area that
   </div>
 </div>
 
-## 📚 Latest Posts Across All Topics
-
-{% for post in site.posts limit:3 %}
-<div class="recent-post">
-  <h4><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
-  <div class="post-meta">{{ post.date | date: "%B %d, %Y" }}</div>
-  <p>{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
-  <a href="{{ post.url | relative_url }}" class="read-more">Read Full Article →</a>
-</div>
-{% endfor %}
-
-<div class="view-all-posts">
-  <a href="#" onclick="showAllPosts()" class="view-all-button">View All Posts</a>
-</div>
-
-<div id="all-posts" class="all-posts-section" style="display: none;">
-  <h3>All Blog Posts</h3>
-  {% for post in site.posts offset:3 %}
-  <div class="recent-post">
-    <h4><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
-    <div class="post-meta">{{ post.date | date: "%B %d, %Y" }}</div>
-    <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
-    <a href="{{ post.url | relative_url }}" class="read-more">Read Full Article →</a>
-  </div>
-  {% endfor %}
-</div>
-
-## 🎯 What You'll Find Here
-
-<div class="features-grid">
-  <div class="feature-item">
-    <h4>🔧 Hands-on Tutorials</h4>
-    <p>Step-by-step guides with practical examples and real-world applications.</p>
-  </div>
-  
-  <div class="feature-item">
-    <h4>⚡ Performance Tips</h4>
-    <p>Advanced optimization techniques for high-performance applications.</p>
-  </div>
-  
-  <div class="feature-item">
-    <h4>🚀 Latest Technologies</h4>
-    <p>Stay updated with cutting-edge developments in Rust, Solana, and AI.</p>
-  </div>
-  
-  <div class="feature-item">
-    <h4>💰 Curated Resources</h4>
-    <p>Handpicked tools, courses, and deals for developers and tech enthusiasts.</p>
-  </div>
-</div>
-
-## 🔗 Quick Links
-
-- 💰 [Tech Deals & Recommendations](/deals/) - Curated resources and special offers
-- 🦀 [Rust & Solana Hub](/rust-solana/) - Blockchain development content
-- 🤖 [AI Agent Hub](/ai-agent/) - Intelligent systems and automation
-
----
-
-*Built with Jekyll and hosted on GitHub Pages. Optimized for performance and SEO. Updated: {{ site.time | date: "%Y-%m-%d" }}*
-
 <style>
 .topic-selection {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 2em;
-  margin: 3em 0;
+  margin: 3em auto;
+  max-width: 900px;
 }
 
 .topic-card {
@@ -198,90 +138,6 @@ Explore our comprehensive content organized by main topics. Select the area that
   text-decoration: none;
 }
 
-.recent-post {
-  margin-bottom: 2em;
-  padding: 1.5em;
-  border: 1px solid #e9ecef;
-  border-radius: 8px;
-  background-color: #f8f9fa;
-}
-
-.recent-post h4 {
-  margin-top: 0;
-  margin-bottom: 0.5em;
-}
-
-.recent-post h4 a {
-  color: #2c3e50;
-  text-decoration: none;
-}
-
-.recent-post h4 a:hover {
-  color: #3498db;
-}
-
-.post-meta {
-  color: #6c757d;
-  font-size: 0.9em;
-  margin-bottom: 1em;
-}
-
-.read-more {
-  color: #3498db;
-  font-weight: 500;
-  text-decoration: none;
-}
-
-.read-more:hover {
-  text-decoration: underline;
-}
-
-.view-all-posts {
-  text-align: center;
-  margin: 2em 0;
-}
-
-.view-all-button {
-  background-color: #6c757d;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-.view-all-button:hover {
-  background-color: #5a6268;
-  text-decoration: none;
-}
-
-.all-posts-section {
-  margin-top: 2em;
-  padding-top: 2em;
-  border-top: 2px solid #e9ecef;
-}
-
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5em;
-  margin: 3em 0;
-}
-
-.feature-item {
-  padding: 1.5em;
-  border: 1px solid #e9ecef;
-  border-radius: 8px;
-  background-color: #ffffff;
-  text-align: center;
-}
-
-.feature-item h4 {
-  color: #2c3e50;
-  margin-bottom: 1em;
-}
-
 @media (max-width: 768px) {
   .topic-selection {
     grid-template-columns: 1fr;
@@ -290,28 +146,5 @@ Explore our comprehensive content organized by main topics. Select the area that
   .topic-card {
     padding: 1.5em;
   }
-  
-  .features-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .recent-post {
-    padding: 1em;
-  }
 }
 </style>
-
-<script>
-function showAllPosts() {
-  const allPostsSection = document.getElementById('all-posts');
-  const viewAllButton = document.querySelector('.view-all-button');
-  
-  if (allPostsSection.style.display === 'none') {
-    allPostsSection.style.display = 'block';
-    viewAllButton.textContent = 'Hide Additional Posts';
-  } else {
-    allPostsSection.style.display = 'none';
-    viewAllButton.textContent = 'View All Posts';
-  }
-}
-</script>
