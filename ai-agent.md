@@ -14,7 +14,7 @@ Dive deep into the world of AI agents with our comprehensive collection of tutor
 ### 📚 Latest AI Agent Posts
 
 <div class="posts-grid">
-{% assign ai_posts = site.posts | where_exp: "post", "post.categories contains 'ai' or post.categories contains 'agent'" %}
+{% assign ai_posts = site.posts | where: "categories", "AI Agent" %}
 {% for post in ai_posts limit: 12 %}
   <article class="post-card">
     <div class="post-meta">
