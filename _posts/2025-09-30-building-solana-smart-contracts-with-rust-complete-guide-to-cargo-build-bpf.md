@@ -1,7 +1,9 @@
 ---
 layout: post
 title: "Building Solana Smart Contracts with Rust: Complete Guide to cargo build-bpf"
+description: "Master Solana smart contract development with Rust. Learn cargo build-bpf, program architecture, and deployment strategies for high-performance blockchain applications."
 date: 2025-09-30
+categories: [rust, solana, blockchain, smart-contracts]
 author: "Junlian"
 description: "Building Solana Smart Contracts with Rust: Complete Guide to cargo build-bpf"
 excerpt: "This report delves into the process of building Solana smart contracts using the `cargo build-bpf` command in 2025. The `cargo build-bpf` toolchain, t..."

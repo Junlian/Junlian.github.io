@@ -1,7 +1,9 @@
 ---
 layout: post
-title: "Rust Generics in Blockchain Development: Supply Chain Management Applications"
+title: "Rust Generics for Blockchain Development: Advanced Type System Patterns"
+description: "Master Rust generics for blockchain development. Learn advanced type system patterns, trait bounds, and generic programming techniques for Solana and Web3 applications."
 date: 2025-09-30
+categories: [rust, blockchain, programming, generics]
 author: "Junlian"
 description: "Learn how to use Rust generics, monomorphization, and constraints in blockchain development with practical supply chain management examples."
 excerpt: "Explore Rust's powerful generic programming features and how they apply to blockchain development, specifically in supply chain management applications."

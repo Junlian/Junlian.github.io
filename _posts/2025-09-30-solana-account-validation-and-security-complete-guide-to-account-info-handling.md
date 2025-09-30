@@ -1,7 +1,9 @@
 ---
 layout: post
 title: "Solana Account Validation and Security: Complete Guide to Account Info Handling"
+description: "Master Solana account validation and security best practices. Learn comprehensive account info handling, validation patterns, and security measures for robust blockchain applications."
 date: 2025-09-30
+categories: [solana, blockchain, security, validation]
 author: "Junlian"
 description: "Solana Account Validation and Security: Complete Guide to Account Info Handling"
 excerpt: "In Solana, **account infos** are passed to smart contract instructions as part of the transaction payload. These account infos contain metadata about ..."

@@ -1,7 +1,9 @@
 ---
 layout: post
 title: "Custom Instruction Data in Rust Programs: Modular Architecture for Solana Development"
+description: "Learn advanced Rust patterns for Solana development. Master custom instruction data handling, modular architecture, and efficient program design for scalable blockchain applications."
 date: 2025-09-30
+categories: [rust, solana, blockchain, architecture]
 author: "Junlian"
 description: "Custom Instruction Data in Rust Programs: Modular Architecture for Solana Development"
 excerpt: "This report focuses on updating a simple Rust program to include custom instruction data, demonstrating how to serialize and deserialize data using li..."
