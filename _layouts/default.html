@@ -7,10 +7,76 @@
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       line-height: 1.6;
       color: #333;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
+      margin: 0;
+      padding: 0;
       background-color: #fff;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      min-height: 100vh;
+      gap: 20px;
+    }
+    
+    .sidebar {
+      width: 280px;
+      background-color: #f8f9fa;
+      padding: 20px;
+      border-right: 1px solid #e9ecef;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+    }
+    
+    .sidebar h3 {
+      color: #2c3e50;
+      margin-top: 0;
+      margin-bottom: 1em;
+      font-size: 1.1em;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 8px;
+    }
+    
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .sidebar li {
+      margin-bottom: 12px;
+    }
+    
+    .sidebar a {
+      color: #495057;
+      text-decoration: none;
+      display: block;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 0.9em;
+      line-height: 1.4;
+      transition: all 0.2s ease;
+    }
+    
+    .sidebar a:hover {
+      background-color: #e9ecef;
+      color: #3498db;
+      text-decoration: none;
+    }
+    
+    .sidebar .post-date {
+      font-size: 0.8em;
+      color: #6c757d;
+      margin-top: 4px;
+    }
+    
+    .main-content {
+      flex: 1;
+      padding: 20px;
+      min-width: 0;
     }
     
     h1, h2, h3 {
@@ -89,25 +155,123 @@
       margin: 0 15px;
       font-weight: 500;
     }
+    
+    .sidebar-toggle {
+      display: none;
+      background: #3498db;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+    
+    /* Mobile Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+        display: none;
+        border-right: none;
+        border-bottom: 1px solid #e9ecef;
+      }
+      
+      .sidebar.show {
+        display: block;
+      }
+      
+      .sidebar-toggle {
+        display: block;
+      }
+      
+      .main-content {
+        padding: 15px;
+      }
+      
+      .header {
+        margin-bottom: 2em;
+      }
+      
+      .nav a {
+        margin: 0 10px;
+        font-size: 0.9em;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .nav a {
+        display: block;
+        margin: 5px 0;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="header">
-    <h1>{{ site.title | default: "Junlian's Tech Blog" }}</h1>
-    <p>{{ site.description | default: "Rust, Solana & Web Development" }}</p>
+  <div class="container">
+    <aside class="sidebar" id="sidebar">
+      <h3>📚 Blog Posts</h3>
+      <ul>
+        {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+        {% for post in sorted_posts limit: 10 %}
+        <li>
+          <a href="{{ post.url | relative_url }}">
+            {{ post.title }}
+            <div class="post-date">{{ post.date | date: "%B %d, %Y" }}</div>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+      
+      {% if site.posts.size > 10 %}
+      <div style="text-align: center; margin-top: 20px;">
+        <a href="/" style="font-size: 0.9em; color: #3498db;">View All Posts →</a>
+      </div>
+      {% endif %}
+    </aside>
+    
+    <div class="main-content">
+      <button class="sidebar-toggle" onclick="toggleSidebar()">📚 Show Blog Posts</button>
+      
+      <div class="header">
+        <h1>{{ site.title | default: "Junlian's Tech Blog" }}</h1>
+        <p>{{ site.description | default: "Rust, Solana & Web Development" }}</p>
+      </div>
+      
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/deals/">Deals</a>
+      </nav>
+      
+      <main>
+        {{ content }}
+      </main>
+      
+      <footer class="footer">
+        <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title | default: "Junlian's Tech Blog" }}. Built with Jekyll.</p>
+      </footer>
+    </div>
   </div>
   
-  <nav class="nav">
-    <a href="/">Home</a>
-    <a href="/deals/">Deals</a>
-  </nav>
-  
-  <main>
-    {{ content }}
-  </main>
-  
-  <footer class="footer">
-    <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title | default: "Junlian's Tech Blog" }}. Built with Jekyll.</p>
-  </footer>
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      const button = document.querySelector('.sidebar-toggle');
+      
+      if (sidebar.classList.contains('show')) {
+        sidebar.classList.remove('show');
+        button.textContent = '📚 Show Blog Posts';
+      } else {
+        sidebar.classList.add('show');
+        button.textContent = '✕ Hide Blog Posts';
+      }
+    }
+  </script>
 </body>
 </html>
