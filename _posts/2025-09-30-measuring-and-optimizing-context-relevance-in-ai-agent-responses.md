@@ -1,15 +1,3 @@
----
-layout: post
-title: "Measuring and Optimizing Context Relevance in AI Agent Responses"
-description: "Context relevance has emerged as a critical challenge in AI agent development, particularly as systems evolve from simple reactive agents to sophisticated mu..."
-date: 2025-09-30
-categories: [ai, agent, development, automation]
-author: "Junlian"
-tags: [ai, agent, development, automation, machine-learning]
-seo_title: "Measuring and Optimizing Context Relevance in AI Agent Responses - AI Agent Development Guide"
-excerpt: "Context relevance has emerged as a critical challenge in AI agent development, particularly as systems evolve from simple reactive agents to sophisticated mu..."
----
-
 # Measuring and Optimizing Context Relevance in AI Agent Responses
 
 ## Introduction

@@ -1,15 +1,3 @@
----
-layout: post
-title: "Designing Multi-Dimensional Context Scoring Systems: Principles and Implementation"
-description: "Multi-dimensional context scoring systems are essential frameworks for evaluating and ranking entities—such as products, services, or data points—based on mu..."
-date: 2025-09-30
-categories: [ai, agent, development, automation]
-author: "Junlian"
-tags: [ai, agent, development, automation, machine-learning]
-seo_title: "Designing Multi-Dimensional Context Scoring Systems: Principles and Implementation - AI Agent Development Guide"
-excerpt: "Multi-dimensional context scoring systems are essential frameworks for evaluating and ranking entities—such as products, services, or data points—based on mu..."
----
-
 # Designing Multi-Dimensional Context Scoring Systems: Principles and Implementation
 
 ## Introduction

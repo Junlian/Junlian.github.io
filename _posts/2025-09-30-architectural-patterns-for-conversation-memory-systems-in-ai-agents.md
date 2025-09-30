@@ -1,15 +1,3 @@
----
-layout: post
-title: "Architectural Patterns for Conversation Memory Systems in AI Agents"
-description: "Conversation memory systems represent a critical architectural component in modern AI agents, enabling persistent context retention, personalized interaction..."
-date: 2025-09-30
-categories: [ai, agent, development, automation]
-author: "Junlian"
-tags: [ai, agent, development, automation, machine-learning]
-seo_title: "Architectural Patterns for Conversation Memory Systems in AI Agents - AI Agent Development Guide"
-excerpt: "Conversation memory systems represent a critical architectural component in modern AI agents, enabling persistent context retention, personalized interaction..."
----
-
 # Architectural Patterns for Conversation Memory Systems in AI Agents
 
 ## Introduction

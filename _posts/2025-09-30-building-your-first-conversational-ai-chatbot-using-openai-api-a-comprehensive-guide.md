@@ -1,15 +1,3 @@
----
-layout: post
-title: "Building Your First Conversational AI Chatbot Using OpenAI API: A Comprehensive Guide"
-description: "The rapid advancement of artificial intelligence has made conversational AI chatbots more accessible than ever before, with OpenAI's powerful API serving as ..."
-date: 2025-09-30
-categories: [ai, agent, development, automation]
-author: "Junlian"
-tags: [ai, agent, development, automation, machine-learning]
-seo_title: "Building Your First Conversational AI Chatbot Using OpenAI API: A Comprehensive Guide - AI Agent Development Guide"
-excerpt: "The rapid advancement of artificial intelligence has made conversational AI chatbots more accessible than ever before, with OpenAI's powerful API serving as ..."
----
-
 # Building Your First Conversational AI Chatbot Using OpenAI API: A Comprehensive Guide
 
 ## Introduction
