@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://junlian.github.io/sitemap.xml
