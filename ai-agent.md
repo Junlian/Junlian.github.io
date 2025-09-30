@@ -1,62 +1,174 @@
 ---
 layout: default
 title: "AI Agent Development & Implementation"
-description: "Comprehensive guides on building AI agents, automation systems, and intelligent applications. Learn machine learning, natural language processing, and AI integration."
+description: "Explore cutting-edge AI agent development, automation strategies, and machine learning implementation guides. Master the future of intelligent systems."
 permalink: /ai-agent/
 ---
 
-# 🤖 AI Agent Development & Implementation
+# AI Agent Development & Implementation
 
-Explore the fascinating world of AI agents, from simple automation scripts to sophisticated intelligent systems. Learn how to build, deploy, and optimize AI-powered applications that can reason, learn, and interact autonomously.
+## 🤖 Master the Future of Intelligent Systems
 
-## 🚀 What You'll Discover
+Dive deep into the world of AI agents with our comprehensive collection of tutorials, guides, and implementation strategies. From basic prompt engineering to advanced memory management, discover everything you need to build production-ready AI agents.
 
-- **AI Agent Architecture**: Design patterns for intelligent systems
-- **Machine Learning Integration**: Implementing ML models in production
-- **Natural Language Processing**: Building conversational AI and text analysis
-- **Automation Systems**: Creating intelligent workflows and decision-making systems
-- **AI Tool Integration**: Leveraging APIs and frameworks for rapid development
-- **Ethics & Safety**: Responsible AI development and deployment practices
+### 📚 Latest AI Agent Posts
 
-## 📚 Latest AI Agent Posts
-
-{% assign ai_posts = site.posts | where_exp: "post", "post.categories contains 'ai' or post.categories contains 'agent' or post.categories contains 'machine-learning' or post.categories contains 'automation'" %}
-
-{% if ai_posts.size > 0 %}
-  {% for post in ai_posts %}
-  <div class="post-card">
-    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+<div class="posts-grid">
+{% assign ai_posts = site.posts | where_exp: "post", "post.categories contains 'ai' or post.categories contains 'agent'" %}
+{% for post in ai_posts limit: 12 %}
+  <article class="post-card">
     <div class="post-meta">
-      <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
-      {% if post.categories.size > 0 %}
-        <span class="post-categories">
-          {% for category in post.categories %}
-            <span class="category-tag">{{ category }}</span>
-          {% endfor %}
-        </span>
-      {% endif %}
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
     </div>
-    <div class="post-excerpt">
-      {{ post.excerpt | strip_html | truncatewords: 30 }}
+    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    <p class="post-excerpt">{{ post.description | truncate: 120 }}</p>
+    <div class="post-tags">
+      {% for tag in post.tags limit: 3 %}
+        <span class="tag">{{ tag }}</span>
+      {% endfor %}
     </div>
-    <a href="{{ post.url | relative_url }}" class="read-more">Read Full Article →</a>
-  </div>
-  <hr>
+  </article>
+{% endfor %}
+</div>
+
+{% if ai_posts.size > 12 %}
+<div class="view-more">
+  <button id="load-more-posts" class="cta-button">View More Posts</button>
+</div>
+
+<div id="additional-posts" style="display: none;">
+  <div class="posts-grid">
+  {% for post in ai_posts offset: 12 %}
+    <article class="post-card">
+      <div class="post-meta">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+      </div>
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p class="post-excerpt">{{ post.description | truncate: 120 }}</p>
+      <div class="post-tags">
+        {% for tag in post.tags limit: 3 %}
+          <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    </article>
   {% endfor %}
-{% else %}
-  <div class="coming-soon">
-    <h3>🚧 AI Agent Content Coming Soon!</h3>
-    <p>We're preparing comprehensive guides on AI agent development. Check back soon for:</p>
-    <ul>
-      <li>Building Your First AI Agent</li>
-      <li>LLM Integration Patterns</li>
-      <li>Autonomous Decision Making Systems</li>
-      <li>AI Agent Deployment Strategies</li>
-      <li>Multi-Agent System Architecture</li>
-    </ul>
-    <p>In the meantime, explore our <a href="/rust-solana/">Rust & Solana content</a> to learn about building high-performance systems that can power AI applications.</p>
   </div>
+</div>
 {% endif %}
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const loadMoreBtn = document.getElementById('load-more-posts');
+  const additionalPosts = document.getElementById('additional-posts');
+  
+  if (loadMoreBtn && additionalPosts) {
+    loadMoreBtn.addEventListener('click', function() {
+      additionalPosts.style.display = 'block';
+      loadMoreBtn.style.display = 'none';
+    });
+  }
+});
+</script>
+
+<style>
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.post-card {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.post-meta {
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-card h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.post-card h3 a {
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+.post-card h3 a:hover {
+  color: #3498db;
+}
+
+.post-excerpt {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background: #e3f2fd;
+  color: #1976d2;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.view-more {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.cta-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .posts-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .post-card {
+    padding: 1rem;
+  }
+}
+</style>
 
 ## 🎯 Core AI Agent Topics
 
