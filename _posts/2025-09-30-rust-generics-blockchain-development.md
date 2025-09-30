@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Rust Generics in Blockchain Development: Supply Chain Management Applications"
-date: 2025-10-01
+date: 2025-09-30
 author: "Junlian"
 description: "Learn how to use Rust generics, monomorphization, and constraints in blockchain development with practical supply chain management examples."
 excerpt: "Explore Rust's powerful generic programming features and how they apply to blockchain development, specifically in supply chain management applications."
