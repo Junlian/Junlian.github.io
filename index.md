@@ -39,4 +39,4 @@ Stay updated with the latest posts and tech insights. This blog is optimized for
 
 ---
 
-*Built with Jekyll and hosted on GitHub Pages. Optimized for performance and SEO.*
+*Built with Jekyll and hosted on GitHub Pages. Optimized for performance and SEO. Updated: {{ site.time | date: "%Y-%m-%d" }}*
