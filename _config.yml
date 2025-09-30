@@ -4,6 +4,14 @@ url: "https://junlian.github.io"
 permalink: /:title/
 paginate: 5
 
+# Page defaults
+defaults:
+  - scope:
+      path: "pages"
+      type: "pages"
+    values:
+      layout: "default"
+
 # Analytics Configuration
 # Google Analytics 4 Measurement ID for visitor tracking
 google_analytics: G-QQ6X3F3TWM
